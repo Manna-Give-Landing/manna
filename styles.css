@@ -692,16 +692,12 @@ ul { list-style: none; }
 }
 
 .cta-inner {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 48px;
-  align-items: center;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
-.cta-heading {
-  white-space: nowrap;
-}
-.cta-content h2 {
+.cta-content-heading {
   font-size: clamp(1.75rem, 3.2vw, 2.5rem);
   font-weight: 700;
   color: #fff;
@@ -714,12 +710,16 @@ ul { list-style: none; }
   color: rgba(255,255,255,0.6);
   line-height: 1.7;
   margin-bottom: 28px;
-  max-width: 460px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-form .hero-form-field {
   background: rgba(255,255,255,0.08);
   border-color: rgba(255,255,255,0.15);
+  max-width: 480px;
+  margin: 0 auto;
 }
 .cta-form .hero-form-field:focus-within {
   border-color: var(--accent);
@@ -733,7 +733,6 @@ ul { list-style: none; }
   margin-top: 12px; font-size: 0.9rem; color: var(--accent); font-weight: 600;
 }
 
-.cta-visual { display: flex; justify-content: center; opacity: 0.4; }
 
 /* =========================================================
    FOOTER — Minimal
@@ -753,10 +752,36 @@ ul { list-style: none; }
 }
 
 /* =========================================================
-   HEADING UTILITIES
+   DESKTOP LINE LOCKING
    ========================================================= */
-.section-title--oneline {
-  white-space: nowrap;
+.desktop-lock-2 .line,
+.desktop-lock-1 .line {
+  display: block;
+}
+
+@media (min-width: 1025px) {
+  .desktop-lock-2 {
+    max-width: none;
+  }
+  .desktop-lock-2 .line,
+  .desktop-lock-1 .line {
+    white-space: nowrap;
+  }
+  .hero-title {
+    max-width: 720px;
+  }
+  .how-it-works-title {
+    max-width: 760px;
+  }
+  .giving-experience-title {
+    max-width: 760px;
+  }
+  .transparency-title {
+    max-width: 900px;
+  }
+  .final-cta-title {
+    max-width: 1200px;
+  }
 }
 
 /* =========================================================
@@ -880,15 +905,9 @@ ul { list-style: none; }
 
   .transparency-visual { order: -1; }
 
-  .cta-inner { grid-template-columns: 1fr; gap: 24px; }
-  .cta-visual { display: none; }
-
-  .cta-heading { white-space: normal; }
-
   .section-header .section-title { white-space: normal; }
 
   .trust-inner { justify-content: center; }
-  .section-title--oneline { white-space: normal; }
 }
 
 /* Mobile */
@@ -940,6 +959,12 @@ ul { list-style: none; }
   }
   .hero-form-field .btn {
     width: 100%; border-radius: var(--radius-md);
+  }
+
+  /* Line lock fallback */
+  .desktop-lock-2 .line,
+  .desktop-lock-1 .line {
+    white-space: normal;
   }
 
   /* Trust */
