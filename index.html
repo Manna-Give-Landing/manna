@@ -7,7 +7,7 @@
   <meta name="description" content="MANNA helps people support individuals and communities in need through a modern platform designed for trust, transparency, and direct impact.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -49,20 +49,38 @@
         </form>
       </div>
       <div class="hero-visual">
-        <div class="hero-glow"></div>
-        <img src="assets/hero-wallet-card.svg" alt="MANNA wallet card" class="hero-card hero-card-1 hero-float" width="400" height="250">
-        <img src="assets/hero-card-activity.svg" alt="Recent activity" class="hero-card hero-card-2 hero-float-delay" width="340" height="220">
-        <img src="assets/hero-card-ledger.svg" alt="Transparency ledger" class="hero-card hero-card-3 hero-float-slow" width="300" height="200">
+        <div class="hero-stage">
+          <div class="hero-plate" aria-hidden="true"></div>
+          <div class="hero-glow" aria-hidden="true"></div>
+          <img src="assets/hero-wallet-card.svg" alt="MANNA wallet card" class="hero-card hero-card-1 hero-float" width="330" height="210">
+          <img src="assets/hero-card-activity.svg" alt="Recent activity" class="hero-card hero-card-2 hero-float-delay" width="282" height="170">
+          <img src="assets/hero-card-ledger.svg" alt="Transparency ledger" class="hero-card hero-card-3 hero-float-slow" width="260" height="158">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST STRIP ========== -->
+  <section class="trust-strip">
+    <div class="container trust-inner">
+      <p class="trust-strip-label">Building for the ecosystem of direct support.</p>
+      <div class="trust-logos">
+        <span class="trust-mark">Community Partners</span>
+        <span class="trust-mark">Relief Networks</span>
+        <span class="trust-mark">Local Organizations</span>
+        <span class="trust-mark">Mutual Aid Groups</span>
+        <span class="trust-mark">Giving Circles</span>
+        <span class="trust-mark">Direct Support Hubs</span>
       </div>
     </div>
   </section>
 
   <!-- ========== HOW IT WORKS ========== -->
-  <section class="section how-it-works" id="how-it-works">
-    <div class="container how-inner">
+  <section class="section section--std how-it-works" id="how-it-works">
+    <div class="container grid-2col">
       <div class="how-visual reveal">
-        <div class="how-glow"></div>
-        <img src="assets/phone-mockup.svg" alt="MANNA wallet screen" class="how-phone" width="300" height="580">
+        <div class="phone-glow" aria-hidden="true"></div>
+        <img src="assets/screens/iphone-wallet.png" alt="MANNA wallet screen" class="phone-screenshot">
       </div>
       <div class="how-content">
         <h2 class="section-title reveal">How MANNA moves support<br>where it's needed</h2>
@@ -94,8 +112,8 @@
   </section>
 
   <!-- ========== FEATURE SPOTLIGHT ========== -->
-  <section class="section feature-spotlight" id="why-manna">
-    <div class="container feature-inner">
+  <section class="section section--std feature-spotlight" id="why-manna">
+    <div class="container grid-2col">
       <div class="feature-content reveal">
         <div class="feature-tags">
           <span class="tag">Direct Support</span>
@@ -107,21 +125,36 @@
         <a href="#waitlist" class="btn btn-primary">Learn More</a>
       </div>
       <div class="feature-visual reveal">
-        <div class="feature-glow"></div>
-        <div class="feature-cards-stack">
-          <img src="assets/hero-wallet-card.svg" alt="" class="feature-card feature-card-1" width="360" height="225">
-          <img src="assets/hero-card-ledger.svg" alt="" class="feature-card feature-card-2" width="280" height="186">
+        <div class="feature-stage">
+          <div class="feature-glow" aria-hidden="true"></div>
+          <img src="assets/hero-wallet-card.svg" alt="" class="feature-card feature-card-1" width="430" height="245">
+          <img src="assets/hero-card-ledger.svg" alt="" class="feature-card feature-card-2" width="300" height="190">
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ========== RECIPIENT DIGNITY ========== -->
+  <section class="section section--dignity" id="dignity">
+    <div class="container grid-2col">
+      <div class="dignity-content reveal">
+        <h2 class="section-title">Recipient Dignity</h2>
+        <p class="section-body">Support that empowers choice and respect, not dependency.</p>
+        <p class="section-body section-body--secondary">MANNA enables individuals to receive help without losing agency. Donors can contribute directly while recipients maintain control over how support is used.</p>
+      </div>
+      <div class="dignity-visual reveal">
+        <div class="dignity-glow" aria-hidden="true"></div>
+        <img src="assets/screens/iphone-recipient-dignity.png" alt="MANNA recipient dignity screen" class="dignity-screenshot">
+      </div>
+    </div>
+  </section>
+
   <!-- ========== TRANSPARENCY ========== -->
-  <section class="section transparency-section" id="transparency">
-    <div class="container transparency-inner">
+  <section class="section section--std transparency-section" id="transparency">
+    <div class="container grid-2col">
       <div class="transparency-visual reveal">
-        <div class="transparency-glow"></div>
-        <img src="assets/device-transparency.svg" alt="MANNA user type selection" class="transparency-phone" width="300" height="580">
+        <div class="phone-glow" aria-hidden="true"></div>
+        <img src="assets/screens/iphone-composite.png" alt="MANNA transparency dashboard" class="phone-screenshot">
       </div>
       <div class="transparency-content">
         <h2 class="section-title reveal">Transparent by design</h2>
@@ -143,7 +176,7 @@
         <a href="#waitlist" class="btn btn-outline reveal">Get Early Access</a>
       </div>
     </div>
-    <!-- Mini cards -->
+    <!-- Mini cards — tighter to section above -->
     <div class="container transparency-cards reveal">
       <div class="mini-card">
         <img src="assets/icon-give.svg" alt="" width="48" height="48">
@@ -164,7 +197,7 @@
   </section>
 
   <!-- ========== TESTIMONIAL ========== -->
-  <section class="section testimonial-section">
+  <section class="testimonial-section">
     <div class="container testimonial-inner reveal">
       <blockquote>
         <cite>Early Community Insight</cite>
@@ -174,14 +207,13 @@
   </section>
 
   <!-- ========== PARTICIPATION CARDS ========== -->
-  <section class="section participation-section" id="faq">
+  <section class="section section--std participation-section" id="faq">
     <div class="container">
       <div class="section-header reveal">
         <h2 class="section-title">Ways to participate in MANNA</h2>
         <p class="section-body">Whether you want to give directly, mobilize support, or help activate community care at scale, MANNA is being shaped to serve multiple types of participants.</p>
       </div>
       <div class="plan-cards reveal">
-        <!-- Card 1: Individual Givers -->
         <div class="plan-card">
           <h3>Individual Givers</h3>
           <ul>
@@ -192,7 +224,6 @@
           </ul>
           <a href="#waitlist" class="btn btn-outline btn-block">Join Waitlist</a>
         </div>
-        <!-- Card 2: Community Partners (featured) -->
         <div class="plan-card plan-card-featured">
           <h3>Community Partners</h3>
           <ul>
@@ -203,7 +234,6 @@
           </ul>
           <a href="#waitlist" class="btn btn-primary btn-block">Join Waitlist</a>
         </div>
-        <!-- Card 3: Organizations -->
         <div class="plan-card">
           <h3>Organizations</h3>
           <ul>
@@ -219,7 +249,7 @@
   </section>
 
   <!-- ========== FINAL CTA ========== -->
-  <section class="section cta-section" id="waitlist">
+  <section class="cta-section" id="waitlist">
     <div class="container cta-inner">
       <div class="cta-content reveal">
         <h2>Help shape a better future for direct support</h2>
@@ -242,7 +272,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="assets/logo-white.svg" alt="MANNA" width="140" height="32">
+        <img src="assets/logo-white.svg" alt="MANNA" width="120" height="28">
         <p>Direct support, built with dignity.</p>
       </div>
       <div class="footer-links">
@@ -269,9 +299,9 @@
         </div>
         <div class="footer-col">
           <h4>Social</h4>
-          <a href="#" aria-label="X (Twitter)">X</a>
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#">X</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
         </div>
       </div>
     </div>
