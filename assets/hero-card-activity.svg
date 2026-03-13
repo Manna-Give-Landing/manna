@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220" fill="none">
+  <!-- Card body -->
+  <rect x="0" y="0" width="340" height="220" rx="14" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="340" height="52" rx="14" fill="#F7F9FB"/>
+  <rect x="0" y="38" width="340" height="14" fill="#F7F9FB"/>
+  <text x="24" y="34" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#0F1B2D" font-weight="600">Recent Activity</text>
+  <text x="280" y="34" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#2563EB" font-weight="500">See all</text>
+  <!-- Row 1 -->
+  <g transform="translate(24, 68)">
+    <circle cx="16" cy="16" r="16" fill="#FEE2E2"/>
+    <text x="16" y="21" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#EF4444" text-anchor="middle">&#x2191;</text>
+    <text x="44" y="12" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8896A6">3/6/2026</text>
+    <text x="240" y="12" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#0F1B2D" font-weight="600" text-anchor="end">-$500.00</text>
+    <text x="44" y="28" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8896A6">Direct Support</text>
+    <text x="240" y="28" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#2ECC71" text-anchor="end">Completed</text>
+  </g>
+  <!-- Divider -->
+  <rect x="24" y="108" width="292" height="1" fill="#F0F2F5"/>
+  <!-- Row 2 -->
+  <g transform="translate(24, 120)">
+    <circle cx="16" cy="16" r="16" fill="#E8F5EE"/>
+    <text x="16" y="21" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#2ECC71" text-anchor="middle">&#x2713;</text>
+    <text x="44" y="12" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8896A6">3/4/2026</text>
+    <text x="240" y="12" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#0F1B2D" font-weight="600" text-anchor="end">-$120.00</text>
+    <text x="44" y="28" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8896A6">Community Fund</text>
+    <text x="240" y="28" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#2ECC71" text-anchor="end">Completed</text>
+  </g>
+  <!-- Divider -->
+  <rect x="24" y="160" width="292" height="1" fill="#F0F2F5"/>
+  <!-- Row 3 -->
+  <g transform="translate(24, 172)">
+    <circle cx="16" cy="16" r="16" fill="#E8F5EE"/>
+    <text x="16" y="21" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#2ECC71" text-anchor="middle">&#x2713;</text>
+    <text x="44" y="12" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8896A6">3/1/2026</text>
+    <text x="240" y="12" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#0F1B2D" font-weight="600" text-anchor="end">-$75.00</text>
+    <text x="44" y="28" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8896A6">Family Aid</text>
+    <text x="240" y="28" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#2ECC71" text-anchor="end">Completed</text>
+  </g>
+</svg>
