@@ -144,26 +144,6 @@
         );
       }
 
-      // Trust strip entrance
-      var trustMarks = document.querySelectorAll(".trust-mark");
-      if (trustMarks.length) {
-        gsap.fromTo(trustMarks,
-          { opacity: 0, y: 10 },
-          {
-            opacity: 0.35,
-            y: 0,
-            duration: 0.5,
-            stagger: 0.08,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: trustMarks[0],
-              start: "top 92%",
-              once: true
-            }
-          }
-        );
-      }
-
     } else {
       // Fallback: IntersectionObserver
       var observer = new IntersectionObserver(function (entries) {
