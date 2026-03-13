@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 580" fill="none">
+  <!-- Phone frame -->
+  <rect x="10" y="10" width="280" height="560" rx="36" fill="#0F1B2D" stroke="#1E2D42" stroke-width="2"/>
+  <rect x="20" y="20" width="260" height="540" rx="28" fill="#FAFBFC"/>
+  <!-- Notch -->
+  <rect x="100" y="20" width="100" height="26" rx="13" fill="#0F1B2D"/>
+  <!-- Status bar -->
+  <text x="40" y="60" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#0F1B2D" font-weight="600">9:41</text>
+  <!-- Header -->
+  <text x="36" y="92" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#0F1B2D" font-weight="700">Transparency</text>
+  <!-- Stats row -->
+  <rect x="36" y="108" width="108" height="72" rx="12" fill="#0F1B2D"/>
+  <text x="52" y="132" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#8896A6">Support Sent</text>
+  <text x="52" y="158" font-family="Inter, system-ui, sans-serif" font-size="18" fill="white" font-weight="700">$12.5K</text>
+  <rect x="156" y="108" width="108" height="72" rx="12" fill="#E8F5EE"/>
+  <text x="172" y="132" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#3D8C5C">Verified</text>
+  <text x="172" y="158" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#0F1B2D" font-weight="700">98.2%</text>
+  <!-- Flow visualization -->
+  <text x="36" y="210" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#0F1B2D" font-weight="600">Support Flow</text>
+  <rect x="36" y="224" width="228" height="120" rx="12" fill="#F7F9FB"/>
+  <!-- Simplified flow diagram -->
+  <circle cx="80" cy="264" r="18" fill="#2ECC71" opacity="0.15"/>
+  <circle cx="80" cy="264" r="10" fill="#2ECC71"/>
+  <text x="80" y="268" font-family="Inter, system-ui, sans-serif" font-size="8" fill="white" text-anchor="middle">Give</text>
+  <line x1="98" y1="264" x2="132" y2="264" stroke="#2ECC71" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="150" cy="264" r="18" fill="#2ECC71" opacity="0.15"/>
+  <circle cx="150" cy="264" r="10" fill="#2ECC71"/>
+  <text x="150" y="268" font-family="Inter, system-ui, sans-serif" font-size="7" fill="white" text-anchor="middle">Verify</text>
+  <line x1="168" y1="264" x2="202" y2="264" stroke="#2ECC71" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="220" cy="264" r="18" fill="#2ECC71" opacity="0.15"/>
+  <circle cx="220" cy="264" r="10" fill="#2ECC71"/>
+  <text x="220" y="268" font-family="Inter, system-ui, sans-serif" font-size="6" fill="white" text-anchor="middle">Receive</text>
+  <text x="80" y="300" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#8896A6" text-anchor="middle">Donor</text>
+  <text x="150" y="300" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#8896A6" text-anchor="middle">Platform</text>
+  <text x="220" y="300" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#8896A6" text-anchor="middle">Recipient</text>
+  <!-- Ledger -->
+  <text x="36" y="374" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#0F1B2D" font-weight="600">Accountability Log</text>
+  <rect x="36" y="388" width="228" height="40" rx="8" fill="#F7F9FB"/>
+  <text x="52" y="408" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#0F1B2D">Direct to recipient</text>
+  <rect x="180" y="399" width="68" height="14" rx="7" fill="#E8F5EE"/>
+  <text x="214" y="409" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#2ECC71" text-anchor="middle">Verified</text>
+  <rect x="36" y="436" width="228" height="40" rx="8" fill="#F7F9FB"/>
+  <text x="52" y="456" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#0F1B2D">Community fund allocation</text>
+  <rect x="180" y="447" width="68" height="14" rx="7" fill="#E8F5EE"/>
+  <text x="214" y="457" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#2ECC71" text-anchor="middle">Verified</text>
+  <rect x="36" y="484" width="228" height="40" rx="8" fill="#F7F9FB"/>
+  <text x="52" y="504" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#0F1B2D">Monthly report generated</text>
+  <rect x="180" y="495" width="68" height="14" rx="7" fill="#E8F5EE"/>
+  <text x="214" y="505" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#2ECC71" text-anchor="middle">Complete</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 32" fill="none">
+  <!-- Manna logo mark: abstract giving hand/leaf -->
+  <g>
+    <path d="M4 24C4 24 8 8 16 8C20 8 18 18 22 18C26 18 24 10 28 10" stroke="#2ECC71" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="16" cy="6" r="3" fill="#2ECC71"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="38" y="24" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#0F1B2D" letter-spacing="-0.5">manna</text>
+</svg>

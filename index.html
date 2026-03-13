@@ -3,34 +3,308 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manna — Decentralized Giving</title>
+  <title>Manna — Direct Giving, Built with Dignity</title>
+  <meta name="description" content="Manna helps people support individuals and communities in need through a modern platform designed for trust, transparency, and direct impact.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <section class="hero">
-      <h1>Manna</h1>
-      <p class="subtitle">Decentralized giving for people who need it most.</p>
-      <a href="#waitlist" class="btn">Join Waitlist</a>
-    </section>
 
-    <section class="about">
-      <p>Manna is a decentralized platform that connects donors directly with individuals in need — no middlemen, no overhead, no barriers. Transparent, trustless, and built for impact.</p>
-    </section>
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="/" class="header-logo" aria-label="Manna home">
+        <img src="assets/logo.svg" alt="Manna" width="120" height="28">
+      </a>
+      <nav class="header-nav" id="header-nav" aria-label="Main navigation">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#why-manna">Why Manna</a>
+        <a href="#transparency">Transparency</a>
+        <a href="#faq">FAQs</a>
+      </nav>
+      <a href="#waitlist" class="btn btn-primary btn-sm header-cta">Join Waitlist</a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-    <section class="waitlist" id="waitlist">
-      <h2>Get Early Access</h2>
-      <form id="waitlist-form">
-        <input type="email" id="email" placeholder="you@example.com" required>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  </main>
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-content reveal">
+        <h1 class="hero-title">Direct giving,<br>built with dignity.</h1>
+        <p class="hero-subtitle">Manna helps people support individuals and communities in need through a modern platform designed for trust, transparency, and direct impact.</p>
+        <form class="hero-form" id="hero-form" aria-label="Join waitlist">
+          <div class="hero-form-field">
+            <input type="email" id="hero-email" placeholder="Enter your email address" required aria-label="Email address">
+            <button type="submit" class="btn btn-primary" aria-label="Submit email">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <p class="hero-form-helper">We respect your data and will only reach out with meaningful updates.</p>
+          <p class="hero-form-success" id="hero-form-success" hidden>Thanks for joining! We'll be in touch.</p>
+        </form>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-glow"></div>
+        <img src="assets/starburst.svg" alt="" class="hero-starburst hero-float" aria-hidden="true" width="120" height="120">
+        <img src="assets/starburst-small.svg" alt="" class="hero-starburst-sm hero-float-delay" aria-hidden="true" width="60" height="60">
+        <img src="assets/hero-card-donor.svg" alt="Donor wallet interface" class="hero-card hero-card-1 hero-float" width="280" height="170">
+        <img src="assets/hero-card-recipient.svg" alt="Recipient support view" class="hero-card hero-card-2 hero-float-delay" width="240" height="150">
+        <img src="assets/hero-card-transparency.svg" alt="Transparency ledger" class="hero-card hero-card-3 hero-float-slow" width="220" height="130">
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2026 Manna. All rights reserved.</p>
+  <!-- ========== TRUST STRIP ========== -->
+  <section class="trust-strip">
+    <div class="container">
+      <p class="trust-strip-label">Building for the ecosystem of direct support.</p>
+      <div class="trust-logos">
+        <span class="trust-mark">Community Partners</span>
+        <span class="trust-mark">Relief Networks</span>
+        <span class="trust-mark">Local Organizations</span>
+        <span class="trust-mark">Mutual Aid Groups</span>
+        <span class="trust-mark">Giving Circles</span>
+        <span class="trust-mark">Direct Support Hubs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container how-inner">
+      <div class="how-visual reveal">
+        <div class="how-glow"></div>
+        <img src="assets/starburst.svg" alt="" class="how-starburst" aria-hidden="true" width="100" height="100">
+        <img src="assets/phone-mockup.svg" alt="Manna app interface" class="how-phone" width="300" height="580">
+      </div>
+      <div class="how-content">
+        <h2 class="section-title reveal">How Manna moves support where it's needed</h2>
+        <a href="#waitlist" class="btn btn-outline reveal">About Us</a>
+        <div class="how-steps">
+          <div class="how-step reveal">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Give directly</h3>
+              <p>Support individuals, families, and community-led efforts through a clear and simple giving experience.</p>
+            </div>
+          </div>
+          <div class="how-step reveal">
+            <span class="step-num">2</span>
+            <div>
+              <h3>Track transparently</h3>
+              <p>See how support flows through the platform with visibility designed to build confidence and accountability.</p>
+            </div>
+          </div>
+          <div class="how-step reveal">
+            <span class="step-num">3</span>
+            <div>
+              <h3>Extend dignity</h3>
+              <p>Manna is designed to help aid reach real people in a way that respects agency, identity, and human worth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURE SPOTLIGHT ========== -->
+  <section class="section feature-spotlight" id="why-manna">
+    <div class="container feature-inner">
+      <div class="feature-content reveal">
+        <div class="feature-tags">
+          <span class="tag">Direct Support</span>
+          <span class="tag">Transparency</span>
+          <span class="tag">Community Care</span>
+        </div>
+        <h2 class="section-title">A giving experience built for trust, not friction</h2>
+        <p class="section-body">Manna combines modern payment-style design with people-centered giving so support can move faster, feel safer, and remain accountable from sender to recipient.</p>
+        <a href="#waitlist" class="btn btn-primary">Learn More</a>
+      </div>
+      <div class="feature-visual reveal">
+        <div class="feature-glow"></div>
+        <img src="assets/starburst.svg" alt="" class="feature-starburst" aria-hidden="true" width="100" height="100">
+        <div class="feature-cards-stack">
+          <img src="assets/hero-card-donor.svg" alt="" class="feature-card feature-card-1" width="280" height="170">
+          <img src="assets/hero-card-transparency.svg" alt="" class="feature-card feature-card-2" width="220" height="130">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRANSPARENCY ========== -->
+  <section class="section transparency-section" id="transparency">
+    <div class="container transparency-inner">
+      <div class="transparency-visual reveal">
+        <div class="transparency-glow"></div>
+        <img src="assets/starburst.svg" alt="" class="transparency-starburst" aria-hidden="true" width="90" height="90">
+        <img src="assets/device-transparency.svg" alt="Manna transparency dashboard" class="transparency-phone" width="300" height="580">
+      </div>
+      <div class="transparency-content">
+        <h2 class="section-title reveal">Transparent by design</h2>
+        <p class="section-body reveal">Manna is built to make giving clearer and more accountable, with systems that support trust, visibility, and responsible distribution.</p>
+        <div class="checklist reveal">
+          <div class="checklist-col">
+            <div class="check-item"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#E8F5EE"/><path d="M7 11l3 3 5-5" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Clear support flows</div>
+            <div class="check-item"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#E8F5EE"/><path d="M7 11l3 3 5-5" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Donation visibility</div>
+            <div class="check-item"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#E8F5EE"/><path d="M7 11l3 3 5-5" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Dignified recipient experience</div>
+            <div class="check-item"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#E8F5EE"/><path d="M7 11l3 3 5-5" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Simple contributor journey</div>
+          </div>
+          <div class="checklist-col">
+            <div class="check-item"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#E8F5EE"/><path d="M7 11l3 3 5-5" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Community-aligned structure</div>
+            <div class="check-item"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#E8F5EE"/><path d="M7 11l3 3 5-5" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Safer platform interactions</div>
+            <div class="check-item"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#E8F5EE"/><path d="M7 11l3 3 5-5" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Modern financial UX</div>
+            <div class="check-item"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#E8F5EE"/><path d="M7 11l3 3 5-5" stroke="#2ECC71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Accountability-first design</div>
+          </div>
+        </div>
+        <a href="#waitlist" class="btn btn-outline reveal">Get Early Access</a>
+      </div>
+    </div>
+    <!-- Mini cards -->
+    <div class="container transparency-cards reveal">
+      <div class="mini-card">
+        <img src="assets/icon-give.svg" alt="" width="48" height="48">
+        <h4>Frictionless Giving</h4>
+        <p>A modern donation flow that feels familiar, fast, and easy to complete.</p>
+      </div>
+      <div class="mini-card">
+        <img src="assets/icon-shield.svg" alt="" width="48" height="48">
+        <h4>Visible Impact</h4>
+        <p>Contributors can better understand where support is going and why it matters.</p>
+      </div>
+      <div class="mini-card">
+        <img src="assets/icon-heart.svg" alt="" width="48" height="48">
+        <h4>Built for Trust</h4>
+        <p>Every interaction should reinforce confidence, clarity, and respect.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIAL ========== -->
+  <section class="section testimonial-section">
+    <div class="container testimonial-inner reveal">
+      <blockquote>
+        <p>&ldquo;Manna feels like the kind of platform people have needed for a long time&nbsp;&mdash; something that brings together direct support, dignity, and modern trust in one experience.&rdquo;</p>
+        <footer>
+          <cite>Early Community Insight</cite>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ========== PARTICIPATION CARDS ========== -->
+  <section class="section participation-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Ways to participate in Manna</h2>
+        <p class="section-body">Whether you want to give directly, mobilize support, or help activate community care at scale, Manna is being shaped to serve multiple types of participants.</p>
+      </div>
+      <div class="plan-cards reveal">
+        <!-- Card 1: Individual Givers -->
+        <div class="plan-card">
+          <h3>Individual Givers</h3>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct support experience</li>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Clear giving flow</li>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Simple onboarding</li>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Transparent contributions</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-outline btn-block">Join Waitlist</a>
+        </div>
+        <!-- Card 2: Community Partners (featured) -->
+        <div class="plan-card plan-card-featured">
+          <h3>Community Partners</h3>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="rgba(46,204,113,0.2)"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Coordinated support pathways</li>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="rgba(46,204,113,0.2)"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Better visibility tools</li>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="rgba(46,204,113,0.2)"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Participant-centered design</li>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="rgba(46,204,113,0.2)"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority early access</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-primary btn-block">Join Waitlist</a>
+        </div>
+        <!-- Card 3: Organizations -->
+        <div class="plan-card">
+          <h3>Organizations</h3>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Scalable support infrastructure</li>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Community-aligned workflows</li>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Transparent distribution models</li>
+            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Future partnership opportunities</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-outline btn-block">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA ========== -->
+  <section class="section cta-section" id="waitlist">
+    <div class="container cta-inner">
+      <div class="cta-content reveal">
+        <h2>Help shape a better future for direct support</h2>
+        <p>Join Manna early and be part of a platform designed to make giving more human, transparent, and effective.</p>
+        <form class="cta-form" id="cta-form" aria-label="Join waitlist">
+          <div class="hero-form-field">
+            <input type="email" id="cta-email" placeholder="Enter your email address" required aria-label="Email address">
+            <button type="submit" class="btn btn-primary" aria-label="Submit email">Join the Waitlist</button>
+          </div>
+          <p class="cta-form-success" id="cta-form-success" hidden>You're on the list! We'll reach out soon.</p>
+        </form>
+      </div>
+      <div class="cta-visual" aria-hidden="true">
+        <img src="assets/network-pattern.svg" alt="" class="cta-network" width="500" height="300">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo-white.svg" alt="Manna" width="120" height="28">
+        <p>Direct support, built with dignity.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#why-manna">Why Manna</a>
+          <a href="#transparency">Transparency</a>
+          <a href="#faq">FAQs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <a href="#waitlist">Individuals</a>
+          <a href="#waitlist">Partners</a>
+          <a href="#waitlist">Organizations</a>
+          <a href="#waitlist">Early Access</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#waitlist">Contact</a>
+          <a href="#waitlist">Privacy</a>
+          <a href="#waitlist">Terms</a>
+          <a href="#waitlist">Updates</a>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <a href="#" aria-label="X (Twitter)">X</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Manna. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
