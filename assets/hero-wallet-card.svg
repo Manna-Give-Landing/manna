@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" fill="none">
+  <defs>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6f7bf7"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <!-- Card body -->
+  <rect x="0" y="0" width="400" height="250" rx="16" fill="url(#cardGrad)"/>
+  <!-- MANNA brand -->
+  <text x="32" y="48" font-family="Inter, system-ui, sans-serif" font-size="18" fill="white" font-weight="700" letter-spacing="2">MANNA</text>
+  <!-- Contactless icon -->
+  <g transform="translate(352,32)" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5">
+    <path d="M0 8a6 6 0 0 1 4-5.5"/>
+    <path d="M0 8a10 10 0 0 1 7-9.5"/>
+    <path d="M0 8a14 14 0 0 1 10-13"/>
+  </g>
+  <!-- Available Balance label -->
+  <text x="32" y="96" font-family="Inter, system-ui, sans-serif" font-size="13" fill="rgba(255,255,255,0.7)" font-weight="400">Available Balance</text>
+  <!-- Balance amount -->
+  <text x="32" y="140" font-family="Inter, system-ui, sans-serif" font-size="40" fill="white" font-weight="700">$500.00</text>
+  <!-- Card number label -->
+  <text x="32" y="190" font-family="Inter, system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)" font-weight="400">Card Number</text>
+  <!-- Card number -->
+  <text x="32" y="212" font-family="Inter, system-ui, sans-serif" font-size="16" fill="rgba(255,255,255,0.85)" font-weight="500" letter-spacing="2">&#x2022;&#x2022;&#x2022;&#x2022;  &#x2022;&#x2022;&#x2022;&#x2022;  &#x2022;&#x2022;&#x2022;&#x2022;  0000</text>
+  <!-- Pending badge -->
+  <rect x="280" y="192" width="88" height="28" rx="14" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="298" cy="206" r="4" fill="#FBBF24"/>
+  <text x="310" y="211" font-family="Inter, system-ui, sans-serif" font-size="12" fill="white" font-weight="500">Pending</text>
+</svg>

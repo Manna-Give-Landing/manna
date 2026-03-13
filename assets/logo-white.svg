@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 32" fill="none">
-  <g>
-    <path d="M4 24C4 24 8 8 16 8C20 8 18 18 22 18C26 18 24 10 28 10" stroke="#2ECC71" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <circle cx="16" cy="6" r="3" fill="#2ECC71"/>
-  </g>
-  <text x="38" y="24" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">manna</text>
+  <rect x="0" y="4" width="24" height="24" rx="6" fill="#2ECC71"/>
+  <path d="M8 16h8M12 12v8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <text x="34" y="24" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" letter-spacing="3">MANNA</text>
 </svg>

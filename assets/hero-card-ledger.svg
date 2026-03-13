@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" fill="none">
+  <!-- Card body -->
+  <rect x="0" y="0" width="300" height="200" rx="14" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Header -->
+  <text x="24" y="36" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#8896A6" font-weight="500">Transparency Ledger</text>
+  <rect x="24" y="50" width="252" height="1" fill="#F0F2F5"/>
+  <!-- Bar chart -->
+  <g transform="translate(24, 64)">
+    <!-- Direct Aid -->
+    <text x="0" y="12" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#0F1B2D" font-weight="500">Direct Aid</text>
+    <rect x="0" y="20" width="220" height="8" rx="4" fill="#E8F5EE"/>
+    <rect x="0" y="20" width="202" height="8" rx="4" fill="#2ECC71"/>
+    <text x="232" y="30" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#2ECC71" font-weight="600">92%</text>
+    <!-- Platform -->
+    <text x="0" y="56" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#0F1B2D" font-weight="500">Platform</text>
+    <rect x="0" y="64" width="220" height="8" rx="4" fill="#E8F5EE"/>
+    <rect x="0" y="64" width="11" height="8" rx="4" fill="#8896A6"/>
+    <text x="232" y="74" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8896A6" font-weight="600">5%</text>
+    <!-- Community -->
+    <text x="0" y="100" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#0F1B2D" font-weight="500">Community Fund</text>
+    <rect x="0" y="108" width="220" height="8" rx="4" fill="#E8F5EE"/>
+    <rect x="0" y="108" width="7" height="8" rx="4" fill="#8896A6"/>
+    <text x="232" y="118" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8896A6" font-weight="600">3%</text>
+  </g>
+</svg>

@@ -5,46 +5,50 @@
   <!-- Notch -->
   <rect x="100" y="20" width="100" height="26" rx="13" fill="#0F1B2D"/>
   <!-- Status bar -->
-  <text x="40" y="60" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#0F1B2D" font-weight="600">9:41</text>
-  <!-- Header -->
-  <text x="36" y="92" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#0F1B2D" font-weight="700">Transparency</text>
-  <!-- Stats row -->
-  <rect x="36" y="108" width="108" height="72" rx="12" fill="#0F1B2D"/>
-  <text x="52" y="132" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#8896A6">Support Sent</text>
-  <text x="52" y="158" font-family="Inter, system-ui, sans-serif" font-size="18" fill="white" font-weight="700">$12.5K</text>
-  <rect x="156" y="108" width="108" height="72" rx="12" fill="#E8F5EE"/>
-  <text x="172" y="132" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#3D8C5C">Verified</text>
-  <text x="172" y="158" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#0F1B2D" font-weight="700">98.2%</text>
-  <!-- Flow visualization -->
-  <text x="36" y="210" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#0F1B2D" font-weight="600">Support Flow</text>
-  <rect x="36" y="224" width="228" height="120" rx="12" fill="#F7F9FB"/>
-  <!-- Simplified flow diagram -->
-  <circle cx="80" cy="264" r="18" fill="#2ECC71" opacity="0.15"/>
-  <circle cx="80" cy="264" r="10" fill="#2ECC71"/>
-  <text x="80" y="268" font-family="Inter, system-ui, sans-serif" font-size="8" fill="white" text-anchor="middle">Give</text>
-  <line x1="98" y1="264" x2="132" y2="264" stroke="#2ECC71" stroke-width="2" stroke-dasharray="4,3"/>
-  <circle cx="150" cy="264" r="18" fill="#2ECC71" opacity="0.15"/>
-  <circle cx="150" cy="264" r="10" fill="#2ECC71"/>
-  <text x="150" y="268" font-family="Inter, system-ui, sans-serif" font-size="7" fill="white" text-anchor="middle">Verify</text>
-  <line x1="168" y1="264" x2="202" y2="264" stroke="#2ECC71" stroke-width="2" stroke-dasharray="4,3"/>
-  <circle cx="220" cy="264" r="18" fill="#2ECC71" opacity="0.15"/>
-  <circle cx="220" cy="264" r="10" fill="#2ECC71"/>
-  <text x="220" y="268" font-family="Inter, system-ui, sans-serif" font-size="6" fill="white" text-anchor="middle">Receive</text>
-  <text x="80" y="300" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#8896A6" text-anchor="middle">Donor</text>
-  <text x="150" y="300" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#8896A6" text-anchor="middle">Platform</text>
-  <text x="220" y="300" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#8896A6" text-anchor="middle">Recipient</text>
-  <!-- Ledger -->
-  <text x="36" y="374" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#0F1B2D" font-weight="600">Accountability Log</text>
-  <rect x="36" y="388" width="228" height="40" rx="8" fill="#F7F9FB"/>
-  <text x="52" y="408" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#0F1B2D">Direct to recipient</text>
-  <rect x="180" y="399" width="68" height="14" rx="7" fill="#E8F5EE"/>
-  <text x="214" y="409" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#2ECC71" text-anchor="middle">Verified</text>
-  <rect x="36" y="436" width="228" height="40" rx="8" fill="#F7F9FB"/>
-  <text x="52" y="456" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#0F1B2D">Community fund allocation</text>
-  <rect x="180" y="447" width="68" height="14" rx="7" fill="#E8F5EE"/>
-  <text x="214" y="457" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#2ECC71" text-anchor="middle">Verified</text>
-  <rect x="36" y="484" width="228" height="40" rx="8" fill="#F7F9FB"/>
-  <text x="52" y="504" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#0F1B2D">Monthly report generated</text>
-  <rect x="180" y="495" width="68" height="14" rx="7" fill="#E8F5EE"/>
-  <text x="214" y="505" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#2ECC71" text-anchor="middle">Complete</text>
+  <text x="40" y="60" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#0F1B2D" font-weight="600">6:24</text>
+
+  <!-- App bar -->
+  <rect x="20" y="68" width="260" height="48" fill="#1A3A5C"/>
+  <text x="40" y="97" font-family="Inter, system-ui, sans-serif" font-size="16" fill="white">&lt;</text>
+  <text x="150" y="97" font-family="Inter, system-ui, sans-serif" font-size="14" fill="white" font-weight="700" text-anchor="middle" letter-spacing="2">MANNA</text>
+
+  <!-- Title -->
+  <text x="36" y="148" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#8896A6">Choose how you'd like to use MANNA</text>
+
+  <!-- Donor card (selected) -->
+  <rect x="36" y="168" width="228" height="80" rx="12" fill="white" stroke="#2563EB" stroke-width="2"/>
+  <!-- Heart icon circle -->
+  <rect x="52" y="184" width="40" height="40" rx="10" fill="#EFF6FF"/>
+  <text x="72" y="210" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#2563EB" text-anchor="middle">&#x2661;</text>
+  <!-- Text -->
+  <text x="104" y="204" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#0F1B2D" font-weight="600">Donor</text>
+  <text x="104" y="220" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8896A6">I want to give directly to people in need</text>
+  <!-- Radio filled -->
+  <circle cx="244" cy="208" r="10" fill="none" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="244" cy="208" r="5" fill="#2563EB"/>
+
+  <!-- Recipient card -->
+  <rect x="36" y="264" width="228" height="90" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="52" y="280" width="40" height="40" rx="10" fill="#F7F9FB"/>
+  <text x="72" y="306" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#0F1B2D" text-anchor="middle">&#x1F464;</text>
+  <text x="104" y="298" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#0F1B2D" font-weight="600">Recipient</text>
+  <text x="104" y="314" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8896A6">I have an invite code from a partner</text>
+  <text x="104" y="332" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#2563EB">&#x1F511; Invite code required</text>
+  <circle cx="244" cy="308" r="10" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Organization card -->
+  <rect x="36" y="370" width="228" height="90" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="52" y="386" width="40" height="40" rx="10" fill="#F7F9FB"/>
+  <text x="72" y="412" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#0F1B2D" text-anchor="middle">&#x1F3E2;</text>
+  <text x="104" y="404" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#0F1B2D" font-weight="600">Organization</text>
+  <text x="104" y="420" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8896A6">I represent a partner organization</text>
+  <text x="104" y="438" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#2563EB">&#x1F511; Invite code required</text>
+  <circle cx="244" cy="414" r="10" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Helper text -->
+  <text x="36" y="490" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8896A6">Don't have an invite code? <tspan fill="#2563EB">Contact your organization</tspan></text>
+
+  <!-- Continue button -->
+  <rect x="36" y="514" width="228" height="44" rx="12" fill="#1A3A5C"/>
+  <text x="150" y="541" font-family="Inter, system-ui, sans-serif" font-size="14" fill="white" font-weight="600" text-anchor="middle">Continue</text>
 </svg>
