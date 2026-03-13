@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #0a0a0f;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Hero */
+
+.hero {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #6ef0a5, #3bb8f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #9a9ab0;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.85rem 2.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a0a0f;
+  background: linear-gradient(135deg, #6ef0a5, #3bb8f0);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(110, 240, 165, 0.25);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(110, 240, 165, 0.35);
+}
+
+/* About */
+
+.about {
+  text-align: center;
+  padding: 3rem 0;
+  max-width: 480px;
+}
+
+.about p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #8888a0;
+}
+
+/* Waitlist */
+
+.waitlist {
+  text-align: center;
+  padding: 2rem 0 4rem;
+  width: 100%;
+}
+
+.waitlist h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+#waitlist-form {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#waitlist-form input {
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  padding: 0.85rem 1.2rem;
+  font-size: 1rem;
+  color: #e0e0e0;
+  background: #15151f;
+  border: 1px solid #2a2a3a;
+  border-radius: 50px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#waitlist-form input::placeholder {
+  color: #555568;
+}
+
+#waitlist-form input:focus {
+  border-color: #6ef0a5;
+  box-shadow: 0 0 0 3px rgba(110, 240, 165, 0.15);
+}
+
+#waitlist-form button {
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a0a0f;
+  background: linear-gradient(135deg, #6ef0a5, #3bb8f0);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(110, 240, 165, 0.2);
+}
+
+#waitlist-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(110, 240, 165, 0.3);
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #1a1a28;
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: #55556a;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+  }
+
+  #waitlist-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #waitlist-form input,
+  #waitlist-form button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
