@@ -479,29 +479,38 @@ ul { list-style: none; }
   height: 100%;
 }
 
-.problem-content {
+.problem-grid {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 72px;
+  align-items: start;
+}
+
+.problem-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .problem-title {
   font-size: clamp(2rem, 4vw, 3.25rem);
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 48px;
-  text-align: center;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 .problem-body {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 26px;
   text-align: left;
 }
 
 .problem-body p {
-  font-size: clamp(1.15rem, 2vw, 1.375rem);
-  line-height: 1.9;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  line-height: 1.85;
   color: var(--navy);
   font-weight: 400;
 }
@@ -513,6 +522,24 @@ ul { list-style: none; }
 
 .problem-body em {
   font-style: italic;
+}
+
+.problem-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.problem-phone {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,.10));
 }
 
 /* =========================================================
@@ -1230,9 +1257,11 @@ ul { list-style: none; }
   }
 
   /* --- 4c. Problem section mobile --- */
-  .problem-title { margin-bottom: 24px; }
+  .problem-grid { grid-template-columns: 1fr; gap: 32px; }
+  .problem-title { margin-bottom: 20px; }
   .problem-body { gap: 20px; }
   .problem-body p { font-size: 1rem; line-height: 1.75; }
+  .problem-phone { max-width: 320px; margin: 0 auto; }
 
   /* --- 4d. Process section mobile --- */
   .process-section { padding: 40px 0 48px; }
