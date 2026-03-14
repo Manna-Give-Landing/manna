@@ -21,24 +21,24 @@
   onScroll();
 
   /* ---------- Mobile menu ---------- */
-  var menuBtn = document.getElementById("mobile-menu-btn");
-  var nav = document.getElementById("header-nav");
+  var toggle = document.querySelector('.mobile-menu-toggle');
+  var panel = document.querySelector('#mobile-nav');
 
-  menuBtn.addEventListener("click", function () {
-    var expanded = menuBtn.getAttribute("aria-expanded") === "true";
-    menuBtn.setAttribute("aria-expanded", String(!expanded));
-    menuBtn.classList.toggle("active");
-    nav.classList.toggle("open");
-  });
-
-  // Close mobile nav when clicking a link
-  nav.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", function () {
-      menuBtn.classList.remove("active");
-      menuBtn.setAttribute("aria-expanded", "false");
-      nav.classList.remove("open");
+  if (toggle && panel) {
+    toggle.addEventListener('click', function () {
+      var isOpen = toggle.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      panel.hidden = !isOpen;
     });
-  });
+
+    panel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        panel.hidden = true;
+      });
+    });
+  }
 
   /* ---------- Form handling ---------- */
   function isValidEmail(email) {
