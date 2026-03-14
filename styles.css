@@ -184,7 +184,7 @@ ul { list-style: none; }
    HERO
    ========================================================= */
 .hero {
-  padding-top: 124px;
+  padding-top: 200px;
   padding-bottom: 76px;
   position: relative;
   overflow: hidden;
@@ -441,10 +441,11 @@ ul { list-style: none; }
 .step-num {
   width: 56px; height: 56px;
   border-radius: 50%;
-  border: 1.5px dashed var(--border);
+  border: 1.5px solid rgba(46, 204, 113, 0.25);
+  background: var(--accent-light);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.5rem; font-weight: 600;
-  color: var(--text); flex-shrink: 0;
+  color: var(--navy); flex-shrink: 0;
 }
 
 .how-step h3 {
@@ -792,6 +793,9 @@ ul { list-style: none; }
   background: var(--bg);
 }
 
+/* FAQ title toggle — full on desktop, short on mobile */
+.faq-title-short { display: none; }
+
 .faq-accordion {
   max-width: 760px;
   margin: 0 auto;
@@ -985,10 +989,12 @@ ul { list-style: none; }
 
   /* --- 2. Mobile hero headline --- */
   .hero { padding-top: 88px; padding-bottom: 40px; }
+  .hero-content { max-width: 100%; }
   .hero-title {
     font-size: clamp(2.25rem, 10vw, 2.875rem);
     line-height: 1.0;
-    max-width: 92vw;
+    width: 100%;
+    max-width: none;
   }
 
   /* --- 3. Mobile hero spacing & reorder --- */
@@ -1014,8 +1020,8 @@ ul { list-style: none; }
     top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
     transform: none !important;
     animation: none !important;
-    width: 90% !important; height: auto !important;
-    max-width: 300px;
+    width: 94% !important; height: auto !important;
+    max-width: 340px;
   }
 
   .hero-form-field {
@@ -1030,13 +1036,23 @@ ul { list-style: none; }
     width: 100%; border-radius: var(--radius-md);
   }
 
+  /* --- 4b. Mobile helper text --- */
+  .hero-form-helper {
+    font-size: 0.72rem;
+    text-align: center;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* --- 5. How It Works heading --- */
   .how-it-works-title {
     font-size: clamp(1.5rem, 7vw, 2rem);
   }
 
   /* --- 6. Giving Experience spacing --- */
-  .feature-tags { margin-bottom: 14px; }
+  .feature-tags { margin-bottom: 14px; flex-wrap: nowrap; }
+  .tag { font-size: 0.75rem; padding: 6px 12px; }
   .feature-content .section-title { margin-bottom: 14px; }
   .feature-content .section-body { margin-bottom: 18px; }
   .feature-content .btn { margin-bottom: 0; }
@@ -1049,6 +1065,10 @@ ul { list-style: none; }
     min-height: 360px;
     margin: 0 auto;
   }
+
+  /* --- 7b. Mobile FAQ heading --- */
+  .faq-title-full { display: none; }
+  .faq-title-short { display: inline; }
 
   /* --- 8. Transparency spacing --- */
   .transparency-content .section-body { margin-bottom: 16px; }
