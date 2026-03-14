@@ -173,22 +173,12 @@ ul { list-style: none; }
 
 .header-cta { flex-shrink: 0; }
 
-.mobile-menu-btn {
-  display: none;
-  background: none; border: none; cursor: pointer;
-  width: 28px; height: 20px; position: relative; z-index: 1001;
-}
-.mobile-menu-btn span {
-  display: block; width: 100%; height: 2px; background: var(--text);
-  border-radius: 2px; position: absolute; left: 0;
-  transition: transform 0.3s, opacity 0.3s;
-}
-.mobile-menu-btn span:nth-child(1) { top: 0; }
-.mobile-menu-btn span:nth-child(2) { top: 9px; }
-.mobile-menu-btn span:nth-child(3) { top: 18px; }
-.mobile-menu-btn.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-.mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
-.mobile-menu-btn.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+/* Old mobile menu btn — hidden, replaced by mobile-menu-toggle */
+.mobile-menu-btn { display: none; }
+
+/* Mobile menu toggle — hidden on desktop */
+.mobile-menu-toggle { display: none; }
+.mobile-nav-panel { display: none; }
 
 /* =========================================================
    HERO
@@ -828,6 +818,8 @@ ul { list-style: none; }
   font-weight: 600;
   color: var(--text);
   text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   gap: 16px;
   transition: color var(--transition);
 }
@@ -904,40 +896,116 @@ ul { list-style: none; }
 }
 
 /* Mobile */
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   .container { width: calc(100vw - 40px); }
 
-  .section--std { padding: 64px 0; }
-  .section--dignity { padding: 64px 0; }
+  /* --- 9. Global mobile spacing system --- */
+  .section--std { padding: 56px 0; }
+  .section--dignity { padding: 56px 0; }
+  .grid-2col { row-gap: 20px; }
 
-  /* Header */
-  .header-nav {
+  .section-title { margin-bottom: 16px; }
+  .section-body { margin-bottom: 18px; }
+
+  /* --- 10. Mobile header layout --- */
+  .site-header {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--bg);
-    flex-direction: column; align-items: center; justify-content: center;
-    gap: 28px; opacity: 0; pointer-events: none;
-    transition: opacity 0.3s; z-index: 999;
+    z-index: 1000;
   }
-  .header-nav.open { opacity: 1; pointer-events: all; }
-  .header-nav a { font-size: 1.15rem; }
+  .header-inner {
+    height: 56px;
+    justify-content: space-between;
+  }
+  .header-nav { display: none !important; }
   .header-cta { display: none; }
-  .mobile-menu-btn { display: block; }
 
-  /* Hero — mobile reorder: title → subtitle → cards → form */
-  .hero { padding-top: 100px; padding-bottom: 48px; }
-  .hero-inner { display: flex; flex-direction: column; gap: 24px; }
+  /* --- 1. Mobile menu --- */
+  .mobile-menu-toggle {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+  .mobile-menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 999px;
+    background: #0f172a;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+  .mobile-menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .mobile-menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+  .mobile-menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .mobile-nav-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 16px;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px 16px;
+    background: #f3f4f6;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 14px;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10);
+    z-index: 1200;
+  }
+  .mobile-nav-panel[hidden] {
+    display: none !important;
+  }
+  .mobile-nav-link {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: #64748b;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 8px 2px;
+  }
+  .mobile-nav-cta {
+    margin-top: 6px;
+    color: #0f172a;
+  }
+
+  /* --- 2. Mobile hero headline --- */
+  .hero { padding-top: 88px; padding-bottom: 40px; }
+  .hero-title {
+    font-size: clamp(2.25rem, 10vw, 2.875rem);
+    line-height: 1.0;
+    max-width: 92vw;
+  }
+
+  /* --- 3. Mobile hero spacing & reorder --- */
+  .hero-inner { display: flex; flex-direction: column; gap: 0; }
   .hero-content { display: contents; }
-  .hero-title { order: 1; }
-  .hero-subtitle { order: 2; }
-  .hero-visual { order: 3; }
-  .hero-form { order: 4; }
-  .hero-form-helper { order: 4; }
-  .hero-form-success { order: 4; }
+  .hero-title { order: 1; margin-bottom: 14px; }
+  .hero-subtitle { order: 2; margin-bottom: 14px; }
+  .hero-visual { order: 3; margin-top: 0; margin-bottom: 16px; }
+  .hero-form { order: 4; margin-bottom: 10px; }
+  .hero-form-helper { order: 5; margin-top: 0; }
+  .hero-form-success { order: 5; }
+
+  /* --- 4. Hero card cluster --- */
   .hero-stage {
     width: 100%; height: auto;
     display: flex; flex-direction: column; align-items: center;
-    gap: 12px; padding: 16px 0;
+    gap: 10px; padding: 8px 0;
   }
   .hero-plate { display: none; }
   .hero-glow { display: none; }
@@ -946,8 +1014,8 @@ ul { list-style: none; }
     top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
     transform: none !important;
     animation: none !important;
-    width: 100% !important; height: auto !important;
-    max-width: 320px;
+    width: 90% !important; height: auto !important;
+    max-width: 300px;
   }
 
   .hero-form-field {
@@ -962,12 +1030,37 @@ ul { list-style: none; }
     width: 100%; border-radius: var(--radius-md);
   }
 
-  /* Mobile spacing normalization */
+  /* --- 5. How It Works heading --- */
+  .how-it-works-title {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  /* --- 6. Giving Experience spacing --- */
+  .feature-tags { margin-bottom: 14px; }
+  .feature-content .section-title { margin-bottom: 14px; }
+  .feature-content .section-body { margin-bottom: 18px; }
+  .feature-content .btn { margin-bottom: 0; }
+
+  /* --- 7. Recipient Dignity balance --- */
+  .dignity-subheadline { margin-top: 4px; margin-bottom: 8px; }
+  .dignity-content .section-body { margin-bottom: 12px; }
+  .dignity-screenshot {
+    height: 440px;
+    min-height: 360px;
+    margin: 0 auto;
+  }
+
+  /* --- 8. Transparency spacing --- */
+  .transparency-content .section-body { margin-bottom: 16px; }
+  .transparency-content .checklist { margin-bottom: 18px; }
+  .transparency-cards { grid-template-columns: 1fr; margin-top: 24px; }
+
+  /* Mobile visual spacing */
   .how-visual,
   .feature-visual,
   .dignity-visual,
   .transparency-visual {
-    margin-top: 8px;
+    margin-top: 20px;
   }
 
   /* Line lock fallback */
@@ -984,20 +1077,12 @@ ul { list-style: none; }
   /* Phone screenshots */
   .phone-screenshot { height: 420px; }
   .phone-screenshot--feature { height: 380px; }
-  .dignity-screenshot {
-    height: 520px;
-    min-height: 420px;
-    margin: 0 auto;
-  }
 
   /* Feature visual */
   .feature-visual .phone-glow { display: none; }
 
   /* Checklist */
   .checklist { flex-direction: column; gap: 14px; }
-
-  /* Mini cards */
-  .transparency-cards { grid-template-columns: 1fr; margin-top: 36px; }
 
   /* Plan cards */
   .plan-cards { grid-template-columns: 1fr; }
@@ -1006,7 +1091,7 @@ ul { list-style: none; }
   .testimonial-section { padding: 56px 0; }
 
   /* CTA */
-  .cta-section { padding: 64px 0 56px; }
+  .cta-section { padding: 56px 0; }
 
   /* Footer */
   .site-footer { padding: 18px 0; }
