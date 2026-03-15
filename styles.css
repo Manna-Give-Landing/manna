@@ -388,36 +388,13 @@ ul { list-style: none; }
   text-align: left;
 }
 
-.problem-transparency {
-  margin-bottom: 32px;
-}
-
-.problem-transparency-img {
-  max-width: 480px;
-  width: 100%;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card-sm);
-}
-
 .problem-microcopy {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 40px;
-  max-width: 660px;
-}
-
-.problem-diagram {
-  margin-top: 48px;
   text-align: center;
-}
-
-.problem-diagram-img {
-  max-width: 560px;
-  width: 100%;
-  margin: 0 auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card-sm);
+  max-width: 640px;
+  margin: 40px auto 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
 }
 
 .problem-columns {
@@ -703,6 +680,18 @@ ul { list-style: none; }
   color: var(--text-secondary);
 }
 .accordion-card-body li svg { flex-shrink: 0; }
+
+/* Participation CTA buttons — green/white */
+.accordion-card-body .btn {
+  background-color: #2EB875;
+  color: #fff;
+  border: none;
+}
+.accordion-card-body .btn:hover {
+  background-color: #25a367;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(46, 184, 117, 0.25);
+}
 
 /* =========================================================
    INVESTOR MODAL
@@ -1191,7 +1180,7 @@ ul { list-style: none; }
   .hero-content { display: contents; }
   .hero-title { order: 1; margin-bottom: 10px; }
   .hero-subtitle { order: 2; margin-bottom: 10px; }
-  .hero-visual { order: 3; margin-top: 0; margin-bottom: 12px; }
+  .hero-visual { order: 3; display: flex; margin: 20px auto 12px; width: 100%; }
   .hero-form { order: 4; margin-bottom: 8px; }
   .hero-form-helper { order: 5; margin-top: 0; }
   .hero-form-success { order: 5; }
@@ -1251,10 +1240,8 @@ ul { list-style: none; }
 
   /* --- 4c. Problem section mobile --- */
   .problem-title { margin-bottom: 20px; }
-  .problem-transparency { margin-bottom: 24px; }
-  .problem-microcopy { margin-bottom: 28px; font-size: 1rem; }
   .problem-columns { grid-template-columns: 1fr; gap: 28px; }
-  .problem-diagram { margin-top: 32px; }
+  .problem-microcopy { margin: 28px auto 0; font-size: 0.95rem; }
 
   /* --- 4e. Solution section mobile --- */
   .solution-title { margin-bottom: 32px; }
