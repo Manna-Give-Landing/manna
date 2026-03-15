@@ -60,11 +60,10 @@
       </div>
       <div class="hero-visual">
         <div class="hero-stage">
-          <div class="hero-plate" aria-hidden="true"></div>
           <div class="hero-glow" aria-hidden="true"></div>
-          <img src="assets/hero-wallet-card.svg" alt="MANNA wallet card" class="hero-card hero-card-1 hero-float" width="330" height="210">
-          <img src="assets/hero-card-activity.svg" alt="Recent activity" class="hero-card hero-card-2 hero-float-delay" width="282" height="170">
-          <img src="assets/hero-card-ledger.svg" alt="Transparency ledger" class="hero-card hero-card-3 hero-float-slow" width="260" height="158">
+          <img src="assets/screens/iphone-account-type.png" alt="MANNA account setup" class="hero-device hero-device-rear hero-float-rear" width="260" height="520">
+          <img src="assets/screens/iphone-wallet.png" alt="MANNA wallet" class="hero-device hero-device-main hero-float-main" width="280" height="560">
+          <img src="assets/screens/virtual_wallet_card.png" alt="MANNA virtual card" class="hero-device hero-device-card hero-float-card" width="300" height="190">
         </div>
       </div>
     </div>
@@ -85,17 +84,11 @@
   <section class="section section--std problem-section" id="the-problem">
     <div class="container">
       <h2 class="section-title problem-title reveal">The Problem We're Solving</h2>
+      <div class="problem-transparency reveal">
+        <img src="assets/hero-card-ledger.svg" alt="Transparency ledger" class="problem-transparency-img">
+      </div>
+      <p class="problem-microcopy reveal">People want to help. But they don't carry cash, can't see the impact, and the systems meant to help are slow and impersonal.</p>
       <div class="problem-columns reveal">
-        <div class="problem-col">
-          <div class="problem-col-accent"></div>
-          <h3 class="problem-col-title">What People in Need Require</h3>
-          <ul class="problem-list">
-            <li>Access to basic necessities: food, clothing, toiletries, housing, medicine</li>
-            <li>Support that arrives quickly, when the gap is most critical</li>
-            <li>The dignity of choice in how to use resources, rather than being dictated to</li>
-            <li>A trusted channel that reduces stigma and makes receiving help feel safe</li>
-          </ul>
-        </div>
         <div class="problem-col">
           <div class="problem-col-accent"></div>
           <h3 class="problem-col-title">What Donors Require</h3>
@@ -106,8 +99,20 @@
             <li>Guardrails to ensure intention is honored — without infringing on someone else's free will</li>
           </ul>
         </div>
+        <div class="problem-col">
+          <div class="problem-col-accent"></div>
+          <h3 class="problem-col-title">What People in Need Require</h3>
+          <ul class="problem-list">
+            <li>Access to basic necessities: food, clothing, toiletries, housing, medicine</li>
+            <li>Support that arrives quickly, when the gap is most critical</li>
+            <li>The dignity of choice in how to use resources, rather than being dictated to</li>
+            <li>A trusted channel that reduces stigma and makes receiving help feel safe</li>
+          </ul>
+        </div>
       </div>
-      <p class="problem-summary reveal">People want to give but don't carry cash, don't trust their impact, and existing aid is slow and impersonal.</p>
+      <div class="problem-diagram reveal">
+        <img src="assets/screens/problem-statement.png" alt="The problem of giving" class="problem-diagram-img">
+      </div>
     </div>
   </section>
 
@@ -147,38 +152,70 @@
       <div class="section-header reveal">
         <h2 class="section-title">Ways to participate in MANNA</h2>
       </div>
-      <div class="plan-cards reveal">
-        <div class="plan-card">
-          <h3>Donors</h3>
-          <p class="plan-card-body">Support individuals directly in moments that matter. Give instantly through a QR code or profile link and see how your support makes a difference through MANNA's transparent ledger.</p>
-          <ul>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct giving experience</li>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Category-based donations</li>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Transparent impact tracking</li>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Tax documents available in the app</li>
-          </ul>
-          <a href="#waitlist" class="btn btn-outline btn-block">Join Waitlist</a>
+      <div class="participation-grid">
+        <div class="participation-cards reveal">
+          <div class="accordion-card accordion-card--open" data-accordion-card>
+            <button class="accordion-card-header" aria-expanded="true">
+              <svg class="accordion-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#2ECC71" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="accordion-card-intro">
+                <h3>Donors</h3>
+                <p>Support individuals directly in moments that matter.</p>
+              </div>
+              <span class="accordion-card-toggle">Learn more <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="accordion-card-body">
+              <p>Give instantly through a QR code or profile link and see how your support makes a difference through MANNA's transparent ledger.</p>
+              <ul>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct giving experience</li>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Category-based donations</li>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Transparent impact tracking</li>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Tax documents available in the app</li>
+              </ul>
+              <a href="#waitlist" class="btn btn-outline btn-block">Join Waitlist</a>
+            </div>
+          </div>
+          <div class="accordion-card" data-accordion-card>
+            <button class="accordion-card-header" aria-expanded="false">
+              <svg class="accordion-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#2ECC71" stroke-width="1.5"/><path d="M12 7v10M7 12h10" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <div class="accordion-card-intro">
+                <h3>Community Partners</h3>
+                <p>Trusted organizations connect individuals in need with the MANNA platform.</p>
+              </div>
+              <span class="accordion-card-toggle">Learn more <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="accordion-card-body">
+              <p>Secure onboarding and invitation codes help ensure the platform supports real individuals while maintaining dignity and privacy.</p>
+              <ul>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Verify and invite recipients</li>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Connect people with direct support</li>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Appear in the MANNA support directory</li>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Strengthen local community care</li>
+              </ul>
+              <button type="button" class="btn btn-outline btn-block contact-cta-btn">Contact Us</button>
+            </div>
+          </div>
+          <div class="accordion-card" data-accordion-card>
+            <button class="accordion-card-header" aria-expanded="false">
+              <svg class="accordion-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#2ECC71" stroke-width="1.5"/><path d="M12 8v4l3 2" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="accordion-card-intro">
+                <h3>Investors</h3>
+                <p>Support the future of decentralized giving and compassionate technology.</p>
+              </div>
+              <span class="accordion-card-toggle">Learn more <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+            <div class="accordion-card-body">
+              <p>Help scale compassionate technology that connects generosity with real human needs.</p>
+              <ul>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Early investment opportunity</li>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Mission-driven technology</li>
+                <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Scalable social impact model</li>
+              </ul>
+              <button type="button" class="btn btn-outline btn-block contact-cta-btn">Contact Us</button>
+            </div>
+          </div>
         </div>
-        <div class="plan-card plan-card-featured">
-          <h3>Community Partners</h3>
-          <p class="plan-card-body">Trusted organizations help connect individuals in need with the MANNA platform through secure onboarding and invitation codes.</p>
-          <ul>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="rgba(46,204,113,0.2)"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Verify and invite recipients</li>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="rgba(46,204,113,0.2)"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Connect people with direct support</li>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="rgba(46,204,113,0.2)"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Appear in the MANNA support directory</li>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="rgba(46,204,113,0.2)"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Strengthen local community care</li>
-          </ul>
-          <a href="#waitlist" class="btn btn-primary btn-block">Join Waitlist</a>
-        </div>
-        <div class="plan-card">
-          <h3>Investors</h3>
-          <p class="plan-card-body">Support the future of decentralized giving and help scale compassionate technology that connects generosity with real human needs.</p>
-          <ul>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Early investment opportunity</li>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Mission-driven technology</li>
-            <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#E8F5EE"/><path d="M6 9l2 2 4-4" stroke="#2ECC71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Scalable social impact model</li>
-          </ul>
-          <button type="button" class="btn btn-outline btn-block" id="investor-cta-btn">Contact Us</button>
+        <div class="participation-visual reveal">
+          <img src="assets/screens/iphone-composite-2.png" alt="MANNA donation flow" class="participation-phone">
         </div>
       </div>
     </div>
@@ -188,8 +225,17 @@
   <div class="modal-overlay" id="investor-modal" hidden>
     <div class="modal-panel">
       <button class="modal-close" id="investor-modal-close" aria-label="Close">&times;</button>
-      <h3 class="modal-title">Investor Inquiry</h3>
+      <h3 class="modal-title">Contact Us</h3>
       <form class="modal-form" id="investor-form">
+        <div class="modal-field">
+          <label for="inv-reason">Reason for Contact</label>
+          <select id="inv-reason" required>
+            <option value="">Select a reason</option>
+            <option value="investor">Investor</option>
+            <option value="community-partner">Community Partner</option>
+            <option value="general">General Inquiry</option>
+          </select>
+        </div>
         <div class="modal-field-row">
           <div class="modal-field">
             <label for="inv-first">First Name</label>
@@ -220,6 +266,7 @@
 
   <!-- ========== WHY MANNA ========== -->
   <section class="section section--std why-manna-section" id="why-manna">
+    <img src="assets/screens/iphone-recipient-dignity.png" alt="" class="why-manna-bg" aria-hidden="true">
     <div class="container">
       <h2 class="section-title why-manna-title reveal">WHY MANNA?</h2>
       <div class="why-manna-body reveal">

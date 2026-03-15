@@ -60,7 +60,7 @@ ul { list-style: none; }
 }
 
 /* ---------- Section spacing ---------- */
-.section--std { padding: 104px 0; }
+.section--std { padding: 80px 0; }
 
 /* ---------- Typography ---------- */
 .section-title {
@@ -255,7 +255,7 @@ ul { list-style: none; }
   font-weight: 600;
 }
 
-/* Hero visual — stage */
+/* Hero visual — device stage */
 .hero-visual {
   display: flex;
   justify-content: center;
@@ -264,28 +264,15 @@ ul { list-style: none; }
 
 .hero-stage {
   position: relative;
-  width: 520px;
-  height: 460px;
-}
-
-.hero-plate {
-  position: absolute;
-  width: 360px;
-  height: 300px;
-  top: 42px;
-  left: 136px;
-  background: linear-gradient(180deg, rgba(52,211,153,0.10), rgba(52,211,153,0.03));
-  border: 1px solid rgba(52,211,153,0.10);
-  border-radius: var(--radius-lg);
-  transform: rotate(6deg);
-  z-index: 0;
+  width: 480px;
+  height: 500px;
 }
 
 .hero-glow {
   position: absolute;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(0, 200, 120, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(0, 200, 120, 0.12) 0%, transparent 60%);
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -294,47 +281,56 @@ ul { list-style: none; }
   z-index: 0;
 }
 
-.hero-card {
+.hero-device {
   position: absolute;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
+  border-radius: 24px;
+  background: transparent;
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,.10));
 }
 
-.hero-card-1 {
-  width: 330px; height: 210px;
-  top: 18px; left: 34px;
+/* Rear phone — account type, slightly left + higher */
+.hero-device-rear {
+  width: 220px; height: auto;
+  top: 10px; left: 20px;
   transform: rotate(-6deg);
-  z-index: 2;
-}
-.hero-card-2 {
-  width: 282px; height: 170px;
-  top: 98px; left: 250px;
-  transform: rotate(7deg);
-  z-index: 3;
-}
-.hero-card-3 {
-  width: 260px; height: 158px;
-  top: 255px; left: 86px;
-  transform: rotate(0deg);
   z-index: 1;
 }
 
-/* Float */
-@keyframes heroFloat {
+/* Main phone — wallet, center focus */
+.hero-device-main {
+  width: 240px; height: auto;
+  top: 30px; left: 140px;
+  transform: rotate(1deg);
+  z-index: 2;
+}
+
+/* Virtual card — lower right, floating foreground */
+.hero-device-card {
+  width: 260px; height: auto;
+  bottom: 20px; right: 10px;
+  top: auto; left: auto;
+  transform: rotate(3deg);
+  z-index: 3;
+  border-radius: var(--radius-lg);
+  filter: drop-shadow(0 12px 32px rgba(0,0,0,.12));
+}
+
+/* Float animations — device-specific */
+@keyframes floatMain {
+  0%, 100% { transform: translateY(0) rotate(1deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+@keyframes floatRear {
   0%, 100% { transform: translateY(0) rotate(-6deg); }
   50% { transform: translateY(-8px) rotate(-6deg); }
 }
-@keyframes heroFloat2 {
-  0%, 100% { transform: translateY(0) rotate(7deg); }
-  50% { transform: translateY(-6px) rotate(7deg); }
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0) rotate(3deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
 }
-@keyframes heroFloatSlow {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-5px) rotate(0deg); }
-}
-.hero-float { animation: heroFloat 5s ease-in-out infinite; }
-.hero-float-delay { animation: heroFloat2 6s ease-in-out infinite 0.5s; }
-.hero-float-slow { animation: heroFloatSlow 7s ease-in-out infinite 1s; }
+.hero-float-main { animation: floatMain 6s ease-in-out infinite; }
+.hero-float-rear { animation: floatRear 7s ease-in-out infinite 0.3s; }
+.hero-float-card { animation: floatCard 5.5s ease-in-out infinite 0.6s; }
 
 /* =========================================================
    TRUST STRIP
@@ -388,8 +384,40 @@ ul { list-style: none; }
   font-size: clamp(2rem, 4vw, 3.25rem);
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 48px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.problem-transparency {
+  margin-bottom: 32px;
+}
+
+.problem-transparency-img {
+  max-width: 480px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card-sm);
+}
+
+.problem-microcopy {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 660px;
+}
+
+.problem-diagram {
+  margin-top: 48px;
   text-align: center;
+}
+
+.problem-diagram-img {
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card-sm);
 }
 
 .problem-columns {
@@ -446,17 +474,7 @@ ul { list-style: none; }
   background: var(--accent);
 }
 
-.problem-summary {
-  margin-top: 48px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--navy);
-  text-align: center;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
+/* problem-summary removed — replaced by problem-diagram */
 
 /* =========================================================
    THE SOLUTION
@@ -487,6 +505,7 @@ ul { list-style: none; }
   color: var(--navy);
   margin-bottom: 48px;
   letter-spacing: -0.02em;
+  text-align: left;
 }
 
 .solution-grid {
@@ -541,7 +560,7 @@ ul { list-style: none; }
 }
 
 /* =========================================================
-   PARTICIPATION CARDS
+   PARTICIPATION
    ========================================================= */
 .participation-section { background: var(--bg-white); }
 
@@ -559,45 +578,131 @@ ul { list-style: none; }
   max-width: 600px;
 }
 
-.plan-cards {
+/* Two-column layout: cards left, phone right */
+.participation-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  align-items: stretch;
+  grid-template-columns: 57% 43%;
+  gap: 48px;
+  align-items: center;
 }
 
-.plan-card {
+.participation-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.participation-phone {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,.10));
+}
+
+/* Accordion cards */
+.participation-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
   border: 1px solid rgba(0,0,0,0.05);
   border-radius: var(--radius-lg);
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  transition: transform var(--transition), box-shadow var(--transition);
+  overflow: hidden;
+  transition: box-shadow var(--transition);
 }
-.plan-card:hover {
-  transform: translateY(-3px);
+.accordion-card:hover {
   box-shadow: var(--shadow-card-sm);
 }
-.plan-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 22px; }
-.plan-card ul { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; flex: 1; }
-.plan-card li {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 0.88rem; color: var(--text-secondary);
-}
-.plan-card li svg { flex-shrink: 0; }
 
-.plan-card-body {
+.accordion-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  text-align: left;
+  transition: background var(--transition);
+}
+.accordion-card-header:hover {
+  background: rgba(0,0,0,0.015);
+}
+
+.accordion-card-icon {
+  flex-shrink: 0;
+}
+
+.accordion-card-intro {
+  flex: 1;
+  min-width: 0;
+}
+.accordion-card-intro h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.accordion-card-intro p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.accordion-card-toggle {
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.accordion-card-toggle svg {
+  transition: transform 0.3s ease;
+}
+.accordion-card--open .accordion-card-toggle svg {
+  transform: rotate(180deg);
+}
+
+.accordion-card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, padding 0.35s ease-out;
+  padding: 0 24px;
+}
+.accordion-card--open .accordion-card-body {
+  max-height: 400px;
+  padding: 0 24px 24px;
+}
+
+.accordion-card-body p {
   font-size: 0.92rem;
   color: var(--text-secondary);
   line-height: 1.65;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.plan-card-featured { background: var(--navy); border-color: var(--navy); }
-.plan-card-featured h3 { color: #fff; }
-.plan-card-featured li { color: rgba(255,255,255,0.7); }
-.plan-card-featured .plan-card-body { color: rgba(255,255,255,0.6); }
+.accordion-card-body ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.accordion-card-body li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+.accordion-card-body li svg { flex-shrink: 0; }
 
 /* =========================================================
    INVESTOR MODAL
@@ -673,6 +778,7 @@ ul { list-style: none; }
   margin-bottom: 6px;
 }
 
+.modal-field select,
 .modal-field input,
 .modal-field textarea {
   width: 100%;
@@ -687,6 +793,7 @@ ul { list-style: none; }
   outline: none;
 }
 
+.modal-field select:focus,
 .modal-field input:focus,
 .modal-field textarea:focus {
   border-color: var(--accent);
@@ -711,6 +818,26 @@ ul { list-style: none; }
    ========================================================= */
 .why-manna-section {
   background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-manna-bg {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: auto;
+  opacity: 0.15;
+  filter: blur(1px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.why-manna-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .why-manna-title {
@@ -946,15 +1073,18 @@ ul { list-style: none; }
 /* Tablet */
 @media (max-width: 1024px) {
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-stage { width: 100%; max-width: 520px; height: 400px; margin: 0 auto; }
-  .hero-card-1 { width: 280px; height: 178px; top: 10px; left: 20px; }
-  .hero-card-2 { width: 240px; height: 144px; top: 80px; left: 200px; }
-  .hero-card-3 { width: 220px; height: 134px; top: 210px; left: 60px; }
-  .hero-plate { width: 300px; height: 250px; top: 30px; left: 100px; }
+  .hero-stage { width: 100%; max-width: 480px; height: 440px; margin: 0 auto; }
+  .hero-device-rear { width: 190px; top: 10px; left: 10px; }
+  .hero-device-main { width: 210px; top: 30px; left: 120px; }
+  .hero-device-card { width: 220px; bottom: 10px; right: 10px; }
+
+  .participation-grid { grid-template-columns: 1fr; }
 
   .grid-2col { grid-template-columns: 1fr; column-gap: 0; row-gap: 48px; }
 
   .section-header .section-title { white-space: normal; }
+
+  .section--std { padding: 56px 0; }
 
   .trust-inner { justify-content: center; }
 }
@@ -964,7 +1094,7 @@ ul { list-style: none; }
   .container { width: calc(100vw - 40px); }
 
   /* --- 9. Global mobile spacing system --- */
-  .section--std { padding: 56px 0; }
+  .section--std { padding: 40px 0; }
   .grid-2col { row-gap: 20px; }
 
   .section-title { margin-bottom: 16px; }
@@ -1050,7 +1180,7 @@ ul { list-style: none; }
   .hero { padding-top: 88px; padding-bottom: 40px; }
   .hero-content { max-width: 100%; }
   .hero-title {
-    font-size: clamp(2.25rem, 10vw, 2.875rem);
+    font-size: clamp(2.25rem, 10.5vw, 2.875rem);
     line-height: 1.0;
     width: 100%;
     max-width: none;
@@ -1059,28 +1189,43 @@ ul { list-style: none; }
   /* --- 3. Mobile hero spacing & reorder --- */
   .hero-inner { display: flex; flex-direction: column; gap: 0; }
   .hero-content { display: contents; }
-  .hero-title { order: 1; margin-bottom: 14px; }
-  .hero-subtitle { order: 2; margin-bottom: 14px; }
-  .hero-visual { order: 3; margin-top: 0; margin-bottom: 16px; }
-  .hero-form { order: 4; margin-bottom: 10px; }
+  .hero-title { order: 1; margin-bottom: 10px; }
+  .hero-subtitle { order: 2; margin-bottom: 10px; }
+  .hero-visual { order: 3; margin-top: 0; margin-bottom: 12px; }
+  .hero-form { order: 4; margin-bottom: 8px; }
   .hero-form-helper { order: 5; margin-top: 0; }
   .hero-form-success { order: 5; }
 
-  /* --- 4. Hero card cluster --- */
+  /* --- 4. Hero device cluster --- */
   .hero-stage {
-    width: 100%; height: auto;
-    display: flex; flex-direction: column; align-items: center;
-    gap: 10px; padding: 8px 0;
+    width: 100%; height: 320px;
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto;
   }
-  .hero-plate { display: none; }
   .hero-glow { display: none; }
-  .hero-card {
-    position: relative !important;
-    top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
-    transform: none !important;
+  .hero-device {
+    position: absolute !important;
+  }
+  .hero-device-rear {
+    width: 140px !important; height: auto !important;
+    top: 0 !important; left: 0 !important;
+    right: auto !important; bottom: auto !important;
+  }
+  .hero-device-main {
+    width: 160px !important; height: auto !important;
+    top: 10px !important; left: 100px !important;
+    right: auto !important; bottom: auto !important;
+  }
+  .hero-device-card {
+    width: 180px !important; height: auto !important;
+    bottom: 10px !important; right: 10px !important;
+    top: auto !important; left: auto !important;
+  }
+  .hero-float-main,
+  .hero-float-rear,
+  .hero-float-card {
     animation: none !important;
-    width: 94% !important; height: auto !important;
-    max-width: 340px;
   }
 
   .hero-form-field {
@@ -1105,9 +1250,11 @@ ul { list-style: none; }
   }
 
   /* --- 4c. Problem section mobile --- */
-  .problem-title { margin-bottom: 28px; text-align: left; }
-  .problem-columns { grid-template-columns: 1fr; gap: 32px; }
-  .problem-summary { margin-top: 32px; text-align: left; }
+  .problem-title { margin-bottom: 20px; }
+  .problem-transparency { margin-bottom: 24px; }
+  .problem-microcopy { margin-bottom: 28px; font-size: 1rem; }
+  .problem-columns { grid-template-columns: 1fr; gap: 28px; }
+  .problem-diagram { margin-top: 32px; }
 
   /* --- 4e. Solution section mobile --- */
   .solution-title { margin-bottom: 32px; }
@@ -1120,9 +1267,15 @@ ul { list-style: none; }
   .faq-title-full { display: none; }
   .faq-title-short { display: inline; }
 
+  /* Participation mobile */
+  .participation-grid { grid-template-columns: 1fr; gap: 32px; }
+  .participation-visual { order: -1; }
+  .participation-phone { max-width: 300px; }
+
   /* WHY MANNA mobile */
   .why-manna-title { margin-bottom: 28px; }
   .why-manna-body { gap: 16px; }
+  .why-manna-bg { width: 300px; opacity: 0.10; right: -15%; }
 
   /* Investor modal mobile */
   .modal-panel { padding: 28px 20px; }
@@ -1138,9 +1291,6 @@ ul { list-style: none; }
   .trust-strip { padding: 20px 0; }
   .trust-quote { white-space: normal; }
   .trust-quote p { font-size: 1.05rem; }
-
-  /* Plan cards */
-  .plan-cards { grid-template-columns: 1fr; }
 
   /* CTA */
   .cta-section { padding: 56px 0; }

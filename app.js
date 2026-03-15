@@ -124,26 +124,6 @@
         );
       }
 
-      // Stagger on mini-cards
-      var miniCards = document.querySelectorAll(".mini-card");
-      if (miniCards.length) {
-        gsap.fromTo(miniCards,
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            stagger: 0.12,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: miniCards[0],
-              start: "top 88%",
-              once: true
-            }
-          }
-        );
-      }
-
     } else {
       // Fallback: IntersectionObserver
       var observer = new IntersectionObserver(function (entries) {
@@ -180,31 +160,61 @@
     });
   });
 
-  /* ---------- Investor modal ---------- */
-  var investorBtn = document.getElementById("investor-cta-btn");
-  var investorModal = document.getElementById("investor-modal");
-  var investorClose = document.getElementById("investor-modal-close");
-  var investorForm = document.getElementById("investor-form");
-
-  if (investorBtn && investorModal) {
-    investorBtn.addEventListener("click", function () {
-      investorModal.hidden = false;
+  /* ---------- Participation accordion cards ---------- */
+  var accordionCards = document.querySelectorAll("[data-accordion-card]");
+  accordionCards.forEach(function (card) {
+    var header = card.querySelector(".accordion-card-header");
+    if (!header) return;
+    header.addEventListener("click", function () {
+      var isOpen = card.classList.contains("accordion-card--open");
+      // Close all
+      accordionCards.forEach(function (other) {
+        other.classList.remove("accordion-card--open");
+        var btn = other.querySelector(".accordion-card-header");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      });
+      // Toggle current
+      if (!isOpen) {
+        card.classList.add("accordion-card--open");
+        header.setAttribute("aria-expanded", "true");
+      }
     });
+  });
 
-    if (investorClose) {
-      investorClose.addEventListener("click", function () {
-        investorModal.hidden = true;
+  /* ---------- Contact modal ---------- */
+  var contactModal = document.getElementById("investor-modal");
+  var contactClose = document.getElementById("investor-modal-close");
+  var contactForm = document.getElementById("investor-form");
+
+  function openContactModal(reason) {
+    if (!contactModal) return;
+    contactModal.hidden = false;
+    var reasonSelect = document.getElementById("inv-reason");
+    if (reasonSelect && reason) reasonSelect.value = reason;
+  }
+
+  // All contact CTA buttons (investors + community partners)
+  document.querySelectorAll(".contact-cta-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      openContactModal("");
+    });
+  });
+
+  if (contactModal) {
+    if (contactClose) {
+      contactClose.addEventListener("click", function () {
+        contactModal.hidden = true;
       });
     }
 
-    investorModal.addEventListener("click", function (e) {
-      if (e.target === investorModal) {
-        investorModal.hidden = true;
+    contactModal.addEventListener("click", function (e) {
+      if (e.target === contactModal) {
+        contactModal.hidden = true;
       }
     });
 
-    if (investorForm) {
-      investorForm.addEventListener("submit", function (e) {
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
         e.preventDefault();
         var emailInput = document.getElementById("inv-email");
         if (emailInput && !isValidEmail(emailInput.value.trim())) {
@@ -212,13 +222,13 @@
           setTimeout(function () { emailInput.style.borderColor = ""; }, 2000);
           return;
         }
-        console.log("Investor inquiry submitted");
+        console.log("Contact inquiry submitted");
         var successEl = document.getElementById("investor-form-success");
         if (successEl) successEl.hidden = false;
-        investorForm.reset();
+        contactForm.reset();
         setTimeout(function () {
           if (successEl) successEl.hidden = true;
-          investorModal.hidden = true;
+          contactModal.hidden = true;
         }, 3000);
       });
     }
