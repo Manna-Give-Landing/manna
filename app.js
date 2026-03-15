@@ -180,6 +180,50 @@
     });
   });
 
+  /* ---------- Investor modal ---------- */
+  var investorBtn = document.getElementById("investor-cta-btn");
+  var investorModal = document.getElementById("investor-modal");
+  var investorClose = document.getElementById("investor-modal-close");
+  var investorForm = document.getElementById("investor-form");
+
+  if (investorBtn && investorModal) {
+    investorBtn.addEventListener("click", function () {
+      investorModal.hidden = false;
+    });
+
+    if (investorClose) {
+      investorClose.addEventListener("click", function () {
+        investorModal.hidden = true;
+      });
+    }
+
+    investorModal.addEventListener("click", function (e) {
+      if (e.target === investorModal) {
+        investorModal.hidden = true;
+      }
+    });
+
+    if (investorForm) {
+      investorForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var emailInput = document.getElementById("inv-email");
+        if (emailInput && !isValidEmail(emailInput.value.trim())) {
+          emailInput.style.borderColor = "#e74c3c";
+          setTimeout(function () { emailInput.style.borderColor = ""; }, 2000);
+          return;
+        }
+        console.log("Investor inquiry submitted");
+        var successEl = document.getElementById("investor-form-success");
+        if (successEl) successEl.hidden = false;
+        investorForm.reset();
+        setTimeout(function () {
+          if (successEl) successEl.hidden = true;
+          investorModal.hidden = true;
+        }, 3000);
+      });
+    }
+  }
+
   /* ---------- Smooth scroll for anchor links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {
