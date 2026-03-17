@@ -240,7 +240,7 @@ ul { list-style: none; }
 
 /* Connect — QR code visual */
 .connect-qr-centered { margin-top: auto; display: flex; align-items: center; justify-content: center; padding: 20px 0; width: 100%; box-sizing: border-box; }
-.connect-qr-centered .connect-phone { width: 180px; height: auto; display: block; border-radius: 20px; margin: 0 auto; position: relative; top: -24px; }
+.connect-qr-centered .connect-phone { width: 180px; height: auto; display: block; border-radius: 20px; margin: 0 auto; position: relative; top: -34px; }
 
 /* Chart visual */
 .card-visual-chart { margin-top: auto; background: var(--bg-white); border-radius: 16px; padding: 16px; border: 1px solid var(--divider); }
