@@ -238,20 +238,9 @@ ul { list-style: none; }
 .feature-card-title { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
 .feature-card-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
 
-/* Wallet card visual */
-.card-visual-wallet { margin-top: auto; position: relative; height: 200px; }
-.wallet-card { position: absolute; width: 220px; height: 140px; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; color: #fff; }
-.wallet-card--back { background: #2a3020; left: 0; top: 0; z-index: 1; }
-.wallet-card--front { background: var(--dark-olive); left: 60px; top: 30px; z-index: 2; box-shadow: var(--shadow-md); }
-.wallet-card-top { display: flex; justify-content: space-between; align-items: center; font-weight: 900; font-size: 0.85rem; }
-.wallet-visa { font-weight: 900; font-size: 0.9rem; letter-spacing: 0.05em; }
-.wallet-card-chip { width: 32px; height: 22px; background: linear-gradient(135deg, #d4a850, #f0d090); border-radius: 4px; }
-.wallet-card-holder small { display: block; font-size: 0.6rem; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
-.wallet-card-holder strong { font-size: 0.82rem; }
-
-/* Connect phone image */
-.connect-phone-img { position: absolute; right: -20px; top: 50%; transform: translateY(-50%) rotate(4deg); width: 180px; z-index: 5; overflow: hidden; }
-.connect-phone { width: 100%; height: auto; display: block; border-radius: 20px; }
+/* Connect QR image — centered below text */
+.connect-qr-img { margin-top: auto; display: flex; justify-content: center; }
+.connect-qr { width: 260px; height: auto; display: block; border-radius: 20px; }
 
 /* Chart visual */
 .card-visual-chart { margin-top: auto; background: var(--bg-white); border-radius: 16px; padding: 16px; border: 1px solid var(--divider); }
@@ -290,6 +279,7 @@ ul { list-style: none; }
 .feature-card--give-directly { position: relative; overflow: hidden; }
 .give-directly-bg { position: absolute; inset: 0; z-index: 0; }
 .give-directly-bg-img { width: 100%; height: 100%; object-fit: cover; }
+.give-directly-bg-img--mobile { display: none; }
 .give-directly-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.25)); }
 .feature-card--give-directly .feature-card-icon,
 .feature-card--give-directly .feature-card-title,
@@ -496,14 +486,12 @@ ul { list-style: none; }
   .feature-card--lg { min-height: auto !important; height: auto !important; }
   .feature-card--sm { min-height: auto !important; height: auto !important; }
 
-  /* Wallet cards inside Connect card — stack vertically */
-  .card-visual-wallet { height: auto !important; position: relative !important; min-height: auto !important; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
-  .wallet-card { position: relative !important; width: 180px; height: 115px; padding: 14px; left: auto !important; top: auto !important; }
-  .wallet-card--back { left: auto !important; top: auto !important; }
-  .wallet-card--front { left: auto !important; top: auto !important; margin-left: 40px; }
+  /* Connect QR image — full width on mobile */
+  .connect-qr { width: 100% !important; max-width: 280px; }
 
-  /* Connect phone image — flow naturally below cards */
-  .connect-phone-img { position: relative !important; right: auto !important; top: auto !important; bottom: auto !important; width: 120px !important; margin: 16px auto 0 !important; transform: rotate(4deg); }
+  /* Give Directly — swap to mobile image */
+  .give-directly-bg-img--desktop { display: none !important; }
+  .give-directly-bg-img--mobile { display: block !important; }
 
   /* Chart visual — ensure it fits */
   .card-visual-chart { overflow: hidden; }
