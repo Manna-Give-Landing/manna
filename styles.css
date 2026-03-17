@@ -238,9 +238,9 @@ ul { list-style: none; }
 .feature-card-title { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
 .feature-card-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
 
-/* Connect — QR code fills remaining card space */
-.connect-qr-centered { margin-top: auto; display: flex; align-items: center; justify-content: center; flex: 1; }
-.connect-qr-centered .connect-phone { width: 100%; max-width: 100%; height: auto; display: block; border-radius: 20px; object-fit: contain; }
+/* Connect — QR code visual */
+.connect-qr-centered { margin-top: auto; display: flex; align-items: center; justify-content: center; padding: 20px 0; }
+.connect-qr-centered .connect-phone { width: 100%; height: auto; display: block; border-radius: 20px; }
 
 /* Chart visual */
 .card-visual-chart { margin-top: auto; background: var(--bg-white); border-radius: 16px; padding: 16px; border: 1px solid var(--divider); }
