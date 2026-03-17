@@ -75,6 +75,26 @@
   handleFormSubmit("hero-form", "hero-email", "hero-form-success");
   handleFormSubmit("cta-form", "cta-email", "cta-form-success");
 
+  /* ---------- Subscription Alerts form ---------- */
+  var alertForm = document.getElementById("subscription-alerts-form");
+  if (alertForm) {
+    alertForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var input = alertForm.querySelector('input[name="email"]');
+      var email = input.value.trim();
+      if (!isValidEmail(email)) {
+        input.style.borderColor = "#e74c3c";
+        setTimeout(function () { input.style.borderColor = ""; }, 2000);
+        return;
+      }
+      console.log("Subscription alert signup:", email);
+      var successEl = document.getElementById("footer-alert-success");
+      if (successEl) successEl.hidden = false;
+      input.value = "";
+      setTimeout(function () { if (successEl) successEl.hidden = true; }, 5000);
+    });
+  }
+
   /* ---------- Reveal on scroll ---------- */
   function initReveal() {
     var reveals = document.querySelectorAll(".reveal");
