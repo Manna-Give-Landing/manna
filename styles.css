@@ -238,19 +238,9 @@ ul { list-style: none; }
 .feature-card-title { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
 .feature-card-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
 
-/* Connect — wallet cards + phone visual */
-.card-visual-wallet { margin-top: auto; position: relative; height: 200px; }
-.wallet-card { position: absolute; width: 220px; height: 140px; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; color: #fff; }
-.wallet-card--back { background: #2a3020; left: 0; top: 0; z-index: 1; }
-.wallet-card--front { background: var(--dark-olive); left: 60px; top: 30px; z-index: 2; box-shadow: var(--shadow-md); }
-.wallet-card-top { display: flex; justify-content: space-between; align-items: center; font-weight: 900; font-size: 0.85rem; }
-.wallet-visa { letter-spacing: 2px; }
-.wallet-card-chip { width: 32px; height: 22px; background: linear-gradient(135deg, #d4a850, #f0d090); border-radius: 4px; }
-.wallet-card-holder small { display: block; font-size: 0.6rem; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
-.wallet-card-holder strong { font-size: 0.82rem; }
-
-.connect-phone-img { position: absolute; right: -20px; top: 50%; transform: translateY(-50%) rotate(4deg); width: 180px; z-index: 5; overflow: hidden; }
-.connect-phone { width: 100%; height: auto; display: block; border-radius: 20px; }
+/* Connect — QR code visual */
+.connect-qr-centered { margin-top: auto; display: flex; align-items: center; justify-content: center; padding: 20px 0; }
+.connect-qr-centered .connect-phone { width: 200px; height: auto; display: block; border-radius: 20px; }
 
 /* Chart visual */
 .card-visual-chart { margin-top: auto; background: var(--bg-white); border-radius: 16px; padding: 16px; border: 1px solid var(--divider); }
@@ -496,13 +486,8 @@ ul { list-style: none; }
   .feature-card--lg { min-height: auto !important; height: auto !important; }
   .feature-card--sm { min-height: auto !important; height: auto !important; }
 
-  /* Connect — wallet cards on mobile */
-  .card-visual-wallet { height: auto; position: relative; min-height: 180px; }
-  .wallet-card { width: 180px; height: 115px; padding: 14px; }
-  .wallet-card--back { left: 0; top: 0; }
-  .wallet-card--front { left: 40px; top: 24px; }
-
-  .connect-phone-img { position: relative !important; right: auto !important; bottom: auto !important; width: 120px !important; margin: 16px auto 0 !important; transform: rotate(4deg); }
+  /* Connect — QR code on mobile */
+  .connect-qr-centered .connect-phone { width: 150px; }
 
   /* Give Directly — swap to mobile image */
   .give-directly-bg-img--desktop { display: none !important; }
