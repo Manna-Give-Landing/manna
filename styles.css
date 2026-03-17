@@ -171,8 +171,8 @@ ul { list-style: none; }
 .panel-bottom-row { display: flex; align-items: flex-end; justify-content: flex-end; gap: 6px; }
 .projection-stack { display: flex; flex-direction: column; gap: 4px; margin-top: 16px; margin-right: -16px; transform: translate(16px, 16px); }
 .projection-card--stacked { width: 140px; }
-.projection-card--yr1 { mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%); }
-.projection-card--yr3 { mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%); }
+.projection-card--yr1 { /* Completely solid — no fade */ }
+.projection-card--yr3 { mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%); }
 
 /* Logo strip */
 .logo-strip { display: flex; justify-content: center; gap: 48px; padding: 40px 0 0; }
@@ -250,7 +250,7 @@ ul { list-style: none; }
 .wallet-card-holder strong { font-size: 0.82rem; }
 
 /* Connect phone image */
-.connect-phone-img { position: absolute; right: -20px; bottom: -20px; width: 180px; transform: rotate(4deg); z-index: 5; overflow: hidden; }
+.connect-phone-img { position: absolute; right: -20px; top: 50%; transform: translateY(-50%) rotate(4deg); width: 180px; z-index: 5; overflow: hidden; }
 .connect-phone { width: 100%; height: auto; display: block; border-radius: 20px; }
 
 /* Chart visual */
@@ -298,6 +298,10 @@ ul { list-style: none; }
 .sub-price { display: block; font-size: 1.5rem; font-weight: 900; color: var(--text-dark); margin-bottom: 4px; }
 .sub-detail { color: var(--text-muted); }
 
+/* Composite phone visual */
+.card-visual-composite { margin-top: auto; overflow: hidden; max-height: 180px; border-radius: 0 0 var(--card-radius) var(--card-radius); margin: 0 -32px -32px; }
+.composite-phones-img { width: 100%; height: auto; display: block; }
+
 /* ========== PARTICIPATION ========== */
 .participation-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--grid-gap); }
 .participation-card { background: var(--bg-white); border-radius: var(--card-radius); padding: 32px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; transition: transform var(--transition), box-shadow var(--transition); }
@@ -327,7 +331,7 @@ ul { list-style: none; }
 
 /* ========== WHY MANNA / TESTIMONIAL ========== */
 .testimonial-layout { display: grid; grid-template-columns: 300px 1fr; gap: 0; min-height: 400px; border-radius: var(--card-radius); overflow: hidden; }
-.testimonial-logo-card { background: var(--bg-page); display: flex; align-items: center; justify-content: center; padding: 24px; overflow: hidden; }
+.testimonial-logo-card { background: transparent; display: flex; align-items: center; justify-content: center; padding: 24px; overflow: hidden; }
 .testimonial-logo-img { max-width: 160px; height: auto; }
 .testimonial-phone-img { max-width: 240px; width: 100%; height: auto; border-radius: 24px; }
 .testimonial-content { background: var(--dark-olive); padding: 48px; color: var(--text-on-dark); display: flex; flex-direction: column; }
@@ -470,20 +474,20 @@ ul { list-style: none; }
   .problem-microcopy { margin-top: 32px; font-size: 0.95rem; }
 
   .features-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
-  .features-grid > * { grid-column: 1 / -1 !important; grid-row: auto !important; }
+  .features-grid > * { grid-column: 1 / -1 !important; grid-row: auto !important; min-width: 0 !important; }
   .feature-card { padding: 24px !important; overflow: visible !important; }
-  .feature-card--wide { grid-template-columns: 1fr !important; }
+  .feature-card--wide { grid-template-columns: 1fr !important; gap: 16px !important; }
   .feature-card--lg { min-height: auto !important; }
   .feature-card--sm { min-height: auto !important; }
 
   /* Wallet cards inside Connect card — flow naturally */
   .card-visual-wallet { height: auto; position: relative; min-height: 180px; }
-  .wallet-card { width: 200px; height: 128px; }
+  .wallet-card { width: 180px; height: 115px; padding: 14px; }
   .wallet-card--back { left: 0; top: 0; }
   .wallet-card--front { left: 40px; top: 24px; }
 
   /* Connect phone image — flow naturally below cards */
-  .connect-phone-img { position: relative !important; right: auto !important; bottom: auto !important; width: 140px !important; margin: 16px auto 0 !important; transform: rotate(4deg); }
+  .connect-phone-img { position: relative !important; right: auto !important; bottom: auto !important; width: 120px !important; margin: 16px auto 0 !important; transform: rotate(4deg); }
 
   /* Chart visual — ensure it fits */
   .card-visual-chart { overflow: hidden; }
@@ -499,9 +503,10 @@ ul { list-style: none; }
   /* Subscription visual */
   .card-visual-sub { margin-top: 12px; }
 
-  /* Dark card — ensure text wraps properly */
-  .feature-card--dark { padding: 24px !important; }
+  /* Dark card — full width, proper padding */
+  .feature-card--dark { padding: 24px !important; min-height: auto !important; }
   .feature-card--dark .feature-card-title { word-wrap: break-word; }
+  .feature-card--dark .feature-card-dark-grid { display: none; }
 
   .section-heading { font-size: clamp(1.75rem, 7vw, 2.25rem); }
   .section-subheading { margin-bottom: 36px; }
@@ -509,9 +514,10 @@ ul { list-style: none; }
   .participation-grid { grid-template-columns: 1fr; }
   .participation-grid .participation-card:last-child { grid-column: auto; max-width: none; }
 
-  .testimonial-layout { grid-template-columns: 1fr; }
-  .testimonial-logo-card { padding: 24px; }
-  .testimonial-content { padding: 28px; }
+  .testimonial-layout { grid-template-columns: 1fr; position: relative; }
+  .testimonial-logo-card { position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.15; z-index: 0; padding: 24px; }
+  .testimonial-logo-card img { width: 100%; height: 100%; object-fit: contain; }
+  .testimonial-content { position: relative; z-index: 1; padding: 28px; }
 
   .faq-layout { grid-template-columns: 1fr; }
   .faq-illustration { display: none; }
