@@ -160,13 +160,18 @@ ul { list-style: none; }
 
 /* Hero dashboard wrapper with projection cards */
 .hero-dashboard-wrap { position: relative; }
-.projection-cards { position: absolute; left: -60px; top: 50%; transform: translateY(-50%); z-index: 20; display: flex; flex-direction: column; gap: -8px; }
-.projection-card { background: var(--dark-olive); border-radius: 14px; padding: 16px 20px; width: 160px; box-shadow: var(--shadow-md); border: 1px solid rgba(193,255,0,0.1); }
-.projection-card--2 { margin-top: -10px; margin-left: 12px; }
-.projection-card--3 { margin-top: -10px; margin-left: 24px; }
-.projection-label { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
-.projection-amount { display: block; font-size: 1.4rem; font-weight: 900; color: var(--lime-green); line-height: 1.2; }
-.projection-detail { display: block; font-size: 0.68rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
+.projection-card { background: var(--dark-olive); border-radius: 14px; padding: 14px 18px; box-shadow: var(--shadow-md); border: 1px solid rgba(193,255,0,0.1); }
+.projection-label { display: block; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 3px; }
+.projection-amount { display: block; font-size: 1.26rem; font-weight: 900; color: var(--lime-green); line-height: 1.2; }
+.projection-detail { display: block; font-size: 0.61rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
+
+/* Stacked Year 1 + Year 3 cards next to iPhone wallet */
+.panel-bottom-row { display: flex; align-items: flex-end; gap: 12px; }
+.projection-stack { display: flex; flex-direction: column; gap: 6px; }
+.projection-card--stacked { width: 140px; }
+
+/* Year 5 card under the dashboard, angled */
+.projection-card--under { position: absolute; bottom: -32px; left: 50%; transform: translateX(-50%) rotate(-24deg); z-index: 15; width: 160px; clip-path: inset(0 0 25% 0); }
 
 /* Logo strip */
 .logo-strip { display: flex; justify-content: center; gap: 48px; padding: 40px 0 0; }
@@ -404,7 +409,8 @@ ul { list-style: none; }
   .dashboard-body { grid-template-columns: 140px 1fr; }
   .dashboard-content { grid-template-columns: 1fr; }
   .dashboard-panel { display: none; }
-  .projection-cards { display: none; }
+  .projection-stack { display: none; }
+  .projection-card--under { display: none; }
   .problem-columns { grid-template-columns: 1fr 1fr; gap: 32px; }
   .problem-columns .problem-col:last-child { grid-column: 1 / -1; }
   .features-grid { grid-template-columns: 1fr 1fr !important; }
