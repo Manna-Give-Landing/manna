@@ -483,20 +483,20 @@ ul { list-style: none; }
   .problem-microcopy { margin-top: 32px; font-size: 0.95rem; }
 
   .features-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
-  .features-grid > * { grid-column: 1 / -1 !important; grid-row: auto !important; min-width: 0 !important; }
-  .feature-card { padding: 24px !important; overflow: visible !important; }
+  .features-grid > * { grid-column: 1 / -1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }
+  .feature-card { padding: 24px !important; overflow: hidden !important; box-sizing: border-box !important; width: 100% !important; }
   .feature-card--wide { grid-template-columns: 1fr !important; gap: 16px !important; }
-  .feature-card--lg { min-height: auto !important; }
-  .feature-card--sm { min-height: auto !important; }
+  .feature-card--lg { min-height: auto !important; height: auto !important; }
+  .feature-card--sm { min-height: auto !important; height: auto !important; }
 
-  /* Wallet cards inside Connect card — flow naturally */
-  .card-visual-wallet { height: auto; position: relative; min-height: 180px; }
-  .wallet-card { width: 180px; height: 115px; padding: 14px; }
-  .wallet-card--back { left: 0; top: 0; }
-  .wallet-card--front { left: 40px; top: 24px; }
+  /* Wallet cards inside Connect card — stack vertically */
+  .card-visual-wallet { height: auto !important; position: relative !important; min-height: auto !important; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .wallet-card { position: relative !important; width: 180px; height: 115px; padding: 14px; left: auto !important; top: auto !important; }
+  .wallet-card--back { left: auto !important; top: auto !important; }
+  .wallet-card--front { left: auto !important; top: auto !important; margin-left: 40px; }
 
   /* Connect phone image — flow naturally below cards */
-  .connect-phone-img { position: relative !important; right: auto !important; bottom: auto !important; width: 120px !important; margin: 16px auto 0 !important; transform: rotate(4deg); }
+  .connect-phone-img { position: relative !important; right: auto !important; top: auto !important; bottom: auto !important; width: 120px !important; margin: 16px auto 0 !important; transform: rotate(4deg); }
 
   /* Chart visual — ensure it fits */
   .card-visual-chart { overflow: hidden; }
@@ -504,17 +504,17 @@ ul { list-style: none; }
   .chart-bars { height: 60px; }
 
   /* Transfer visual inside Choose Freely — full width */
-  .card-visual-transfer { margin-top: 16px; }
-
-  /* Circles visual — center and fit */
-  .card-visual-circles { padding: 12px 0; }
+  .card-visual-transfer { margin-top: 16px; overflow: hidden; }
 
   /* Subscription visual */
   .card-visual-sub { margin-top: 12px; }
 
+  /* Composite phone image — fix negative margins for mobile padding */
+  .card-visual-composite { margin: 0 -24px -24px !important; max-width: calc(100% + 48px) !important; }
+
   /* Dark card — full width, proper padding */
   .feature-card--dark { padding: 24px !important; min-height: auto !important; }
-  .feature-card--dark .feature-card-title { word-wrap: break-word; }
+  .feature-card--dark .feature-card-title { word-wrap: break-word; overflow-wrap: break-word; }
   .feature-card--dark .feature-card-dark-grid { display: none; }
 
   .section-heading { font-size: clamp(1.75rem, 7vw, 2.25rem); }
