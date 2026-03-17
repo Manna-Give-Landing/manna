@@ -132,25 +132,6 @@
     });
   });
 
-  /* ---------- Participation accordion cards ---------- */
-  var accordionCards = document.querySelectorAll("[data-accordion-card]");
-  accordionCards.forEach(function (card) {
-    var cardHeader = card.querySelector(".accordion-card-header");
-    if (!cardHeader) return;
-    cardHeader.addEventListener("click", function () {
-      var isOpen = card.classList.contains("accordion-card--open");
-      accordionCards.forEach(function (other) {
-        other.classList.remove("accordion-card--open");
-        var btn = other.querySelector(".accordion-card-header");
-        if (btn) btn.setAttribute("aria-expanded", "false");
-      });
-      if (!isOpen) {
-        card.classList.add("accordion-card--open");
-        cardHeader.setAttribute("aria-expanded", "true");
-      }
-    });
-  });
-
   /* ---------- Contact modal ---------- */
   var contactModal = document.getElementById("investor-modal");
   var contactClose = document.getElementById("investor-modal-close");
@@ -164,7 +145,8 @@
   }
 
   document.querySelectorAll(".contact-cta-btn").forEach(function (btn) {
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
       openContactModal("");
     });
   });
