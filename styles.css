@@ -436,7 +436,7 @@ ul { list-style: none; }
   .logo-strip { gap: 24px; flex-wrap: wrap; }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .container { padding: 0 20px; }
   .section--std { padding: 56px 0; }
   .header-inner { height: 60px; justify-content: space-between; }
