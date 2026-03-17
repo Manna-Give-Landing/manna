@@ -59,7 +59,8 @@
         </div>
       </div>
 
-      <!-- Dashboard Mockup -->
+      <!-- Dashboard Mockup with Projection Cards -->
+      <div class="hero-dashboard-wrap">
       <div class="dashboard-mockup reveal">
         <div class="browser-chrome">
           <div class="browser-dots"><span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span></div>
@@ -148,17 +149,21 @@
                     <div class="panel-row"><span class="panel-dot" style="background:#E8B5B5;"></span><span>Healthcare</span><span>$632,450</span><span>15.69%</span></div>
                   </div>
                 </div>
-                <div class="panel-rewards">
-                  <div class="panel-rewards-text"><span class="rewards-title">Transparent</span><span class="rewards-subtitle">&amp; Trusted</span><span class="rewards-desc">Giving</span></div>
-                  <div class="panel-rewards-cards">
-                    <div class="mini-card mini-card--1">
-                      <span class="mini-card-brand">MANNA</span>
-                      <span class="mini-card-number">•••• 3562 8869</span>
+                <div class="panel-bottom-row">
+                  <div class="projection-stack">
+                    <div class="projection-card projection-card--stacked">
+                      <span class="projection-label">Year 1</span>
+                      <span class="projection-amount">$2M</span>
+                      <span class="projection-detail">~$40K avg/org</span>
                     </div>
-                    <div class="mini-card mini-card--2">
-                      <span class="mini-card-brand">MANNA</span>
-                      <span class="mini-card-number">•••• 3562 8869</span>
+                    <div class="projection-card projection-card--stacked">
+                      <span class="projection-label">Year 3</span>
+                      <span class="projection-amount">$50M</span>
+                      <span class="projection-detail">~$1M avg/org</span>
                     </div>
+                  </div>
+                  <div class="panel-iphone-wallet">
+                    <img src="assets/screens/iphone-wallet.png" alt="MANNA Wallet App" class="panel-iphone-img">
                   </div>
                 </div>
               </div>
@@ -166,6 +171,7 @@
           </div>
         </div>
       </div>
+      </div><!-- /hero-dashboard-wrap -->
 
       <!-- Logo Strip -->
       <div class="logo-strip reveal">
@@ -256,39 +262,20 @@
               <div class="wallet-card-holder"><small>Card Holder</small><strong>James Rodriguez</strong></div>
             </div>
           </div>
+          <div class="connect-phone-img">
+            <img src="assets/screens/Scan-QR-copy.png" alt="Scan QR to Connect" class="connect-phone">
+          </div>
         </div>
 
         <div class="feature-card feature-card--lg">
           <div class="feature-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3 class="feature-card-title">Give Directly</h3>
           <p class="feature-card-desc">Funds move instantly to the recipient — no intermediaries, no delays.</p>
-          <!-- Chart visual -->
-          <div class="card-visual-chart">
-            <div class="chart-tabs"><span class="chart-tab chart-tab--active"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13l4-4 3 3 5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Giving</span><span class="chart-tab"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l4 4 3-3 5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Impact</span></div>
-            <div class="chart-body">
-              <div class="chart-main">
-                <small>Giving total</small>
-                <strong class="chart-amount">$75,500.50</strong>
-                <span class="chart-change">+25% Last month</span>
-                <div class="chart-bars">
-                  <div class="chart-bar" style="height:40%"></div>
-                  <div class="chart-bar" style="height:65%"></div>
-                  <div class="chart-bar" style="height:50%"></div>
-                  <div class="chart-bar" style="height:80%"></div>
-                  <div class="chart-bar chart-bar--active" style="height:95%"></div>
-                  <div class="chart-bar" style="height:70%"></div>
-                </div>
-                <div class="chart-months"><span>Jan</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span></div>
-              </div>
-              <div class="chart-side">
-                <div class="chart-side-card">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="3" stroke="#1C1F13" stroke-width="1.5"/><path d="M6 10h8M10 6v8" stroke="#1C1F13" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <small>Total Impact</small>
-                  <strong>$15,500.00</strong>
-                  <span class="chart-side-detail">2 of 10 goals complete</span>
-                </div>
-              </div>
-            </div>
+          <!-- Currency/category circles -->
+          <div class="card-visual-circles">
+            <div class="category-circle"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#1C1F13" stroke-width="1.5"/><path d="M9 18V10l5 8V10" stroke="#1C1F13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="category-circle category-circle--md"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="16" stroke="#1C1F13" stroke-width="1.5"/><path d="M18 10v16M13 14h10M13 22h10" stroke="#1C1F13" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div class="category-circle"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#C1FF00" stroke-width="1.5"/><path d="M14 8v12M9 14h10" stroke="#C1FF00" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           </div>
         </div>
 
@@ -335,11 +322,33 @@
           <div class="feature-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg></div>
           <h3 class="feature-card-title">See the Impact</h3>
           <p class="feature-card-desc">Donors and organizations gain visibility into how generosity creates real-world impact.</p>
-          <!-- Currency/category circles -->
-          <div class="card-visual-circles">
-            <div class="category-circle"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#1C1F13" stroke-width="1.5"/><path d="M9 18V10l5 8V10" stroke="#1C1F13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="category-circle category-circle--md"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="16" stroke="#1C1F13" stroke-width="1.5"/><path d="M18 10v16M13 14h10M13 22h10" stroke="#1C1F13" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            <div class="category-circle"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#C1FF00" stroke-width="1.5"/><path d="M14 8v12M9 14h10" stroke="#C1FF00" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <!-- Chart visual -->
+          <div class="card-visual-chart">
+            <div class="chart-tabs"><span class="chart-tab chart-tab--active"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13l4-4 3 3 5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Giving</span><span class="chart-tab"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l4 4 3-3 5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Impact</span></div>
+            <div class="chart-body">
+              <div class="chart-main">
+                <small>Giving total</small>
+                <strong class="chart-amount">$75,500.50</strong>
+                <span class="chart-change">+25% Last month</span>
+                <div class="chart-bars">
+                  <div class="chart-bar" style="height:40%"></div>
+                  <div class="chart-bar" style="height:65%"></div>
+                  <div class="chart-bar" style="height:50%"></div>
+                  <div class="chart-bar" style="height:80%"></div>
+                  <div class="chart-bar chart-bar--active" style="height:95%"></div>
+                  <div class="chart-bar" style="height:70%"></div>
+                </div>
+                <div class="chart-months"><span>Jan</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span></div>
+              </div>
+              <div class="chart-side">
+                <div class="chart-side-card">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="3" stroke="#1C1F13" stroke-width="1.5"/><path d="M6 10h8M10 6v8" stroke="#1C1F13" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  <small>Total Impact</small>
+                  <strong>$15,500.00</strong>
+                  <span class="chart-side-detail">2 of 10 goals complete</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -536,18 +545,6 @@
             <div class="faq-answer"><p>MANNA provides impact visibility through a transparent ledger — so donors can see how their generosity creates change, while recipient dignity and privacy are always preserved.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-trigger" aria-expanded="false"><span>Do donors receive tax documents?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-            <div class="faq-answer"><p>Yes. Donors can retrieve donation records and tax forms directly from the app.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-trigger" aria-expanded="false"><span>What is the MANNA directory?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-            <div class="faq-answer"><p>The MANNA directory helps recipients search for trusted resources and community services that meet their needs. Verified organizations can be listed without charge.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-trigger" aria-expanded="false"><span>Who is MANNA for?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-            <div class="faq-answer"><p>MANNA is designed for three primary audiences: individual donors who want their generosity to have visible impact, organizations that need a more efficient way to distribute aid, and recipients who deserve support delivered with dignity, choice, and autonomy.</p></div>
-          </div>
-          <div class="faq-item">
             <button class="faq-trigger" aria-expanded="false"><span>How is MANNA different?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
             <div class="faq-answer"><p>Most aid systems create distance between generosity and impact through complexity and administrative layers. MANNA restores the natural flow of aid — direct, transparent, and built on the belief that dignity is preserved when people are trusted to decide what they need most. For organizations, this means less overhead, automated reporting, and the ability to show donors exactly how their support is making a difference.</p></div>
           </div>
@@ -563,50 +560,6 @@
             <button class="faq-trigger" aria-expanded="false"><span>What kind of impact reporting does MANNA provide?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
             <div class="faq-answer"><p>MANNA provides impact analytics that show how aid moves through the network — from donation to real-world use. Organizations can see what needs are being met, how quickly support reaches recipients, and share these insights with their donors to demonstrate impact and strengthen trust.</p></div>
           </div>
-          <div class="faq-item">
-            <button class="faq-trigger" aria-expanded="false"><span>Can an organization use MANNA alongside its existing programs?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-            <div class="faq-answer"><p>Yes. MANNA is designed to integrate with existing aid programs, not replace them. Organizations can use the platform to add a direct distribution channel, improve reporting on current programs, or pilot a new approach to transparent aid delivery.</p></div>
-          </div>
-        </div>
-        <div class="faq-illustration">
-          <!-- Person at laptop SVG illustration -->
-          <svg viewBox="0 0 400 440" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-illustration-svg">
-            <rect width="400" height="440" rx="24" fill="#EFEFEF"/>
-            <!-- Desk -->
-            <ellipse cx="200" cy="340" rx="120" ry="8" fill="#8B6D4C"/>
-            <rect x="100" y="270" width="200" height="70" rx="4" fill="#A0845C"/>
-            <!-- Laptop -->
-            <rect x="130" y="230" width="140" height="90" rx="6" fill="#D4D4D4"/>
-            <rect x="136" y="236" width="128" height="78" rx="3" fill="#FFF"/>
-            <rect x="110" y="320" width="180" height="8" rx="4" fill="#C4C4C4"/>
-            <!-- Person body -->
-            <rect x="172" y="170" width="56" height="80" rx="6" fill="#3D3025"/>
-            <!-- Arms -->
-            <path d="M172 200c-20 10-30 30-25 45" stroke="#3D3025" stroke-width="12" stroke-linecap="round"/>
-            <path d="M228 200c20 10 30 30 25 45" stroke="#3D3025" stroke-width="12" stroke-linecap="round"/>
-            <!-- Neck -->
-            <rect x="190" y="150" width="20" height="25" rx="4" fill="#E8C9A0"/>
-            <!-- Head -->
-            <circle cx="200" cy="135" r="30" fill="#E8C9A0"/>
-            <!-- Hair bun -->
-            <circle cx="200" cy="108" r="14" fill="#3D3025"/>
-            <path d="M175 125c0-20 10-30 25-32s25 5 25 20" fill="#3D3025"/>
-            <!-- Eyes -->
-            <circle cx="190" cy="133" r="2" fill="#1C1F13"/>
-            <circle cx="210" cy="133" r="2" fill="#1C1F13"/>
-            <!-- Mouth -->
-            <path d="M195 142c2 3 8 3 10 0" stroke="#1C1F13" stroke-width="1.5" stroke-linecap="round"/>
-            <!-- Coffee cup -->
-            <rect x="265" y="298" width="18" height="22" rx="3" fill="#FFF" stroke="#D4D4D4" stroke-width="1.5"/>
-            <path d="M283 305c5 0 8 3 8 7s-3 7-8 7" stroke="#D4D4D4" stroke-width="1.5"/>
-            <!-- Steam -->
-            <path d="M271 292c0-5 3-8 1-14" stroke="#D4D4D4" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M277 290c0-5 3-8 1-14" stroke="#D4D4D4" stroke-width="1.5" stroke-linecap="round"/>
-            <!-- Wall details -->
-            <rect x="310" y="80" width="40" height="30" rx="4" fill="#E8E8E8"/>
-            <rect x="320" y="140" width="30" height="20" rx="4" fill="#E8E8E8"/>
-            <rect x="50" y="100" width="35" height="25" rx="4" fill="#E8E8E8"/>
-          </svg>
         </div>
       </div>
     </div>
@@ -690,20 +643,17 @@
           <a href="#">Terms</a>
         </div>
         <div class="footer-col footer-col--subscribe">
-          <div class="footer-social">
-            <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#fff" stroke-width="1.5"/><path d="M13 10h-2V8c0-.6.4-1 1-1h1V5h-1.5C10.1 5 9 6.1 9 7.5V10H7v2h2v6h2v-6h2l.5-2z" fill="#fff"/></svg></a>
-            <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="5" stroke="#fff" stroke-width="1.5"/><circle cx="10" cy="10" r="3.5" stroke="#fff" stroke-width="1.5"/><circle cx="14.5" cy="5.5" r="1" fill="#fff"/></svg></a>
-            <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="3" stroke="#fff" stroke-width="1.5"/><path d="M6 9v5M6 6v.01M10 14v-3.5c0-1 .5-1.5 1.5-1.5s1.5.5 1.5 1.5V14" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M18 4.5c-.7.3-1.4.5-2.2.6.8-.5 1.4-1.2 1.7-2.1-.7.4-1.5.7-2.4.9A3.8 3.8 0 0 0 8.4 7c0 .3 0 .6.1.9C5.7 7.7 3.4 6.4 1.9 4.4c-.3.6-.5 1.2-.5 1.9 0 1.3.7 2.5 1.7 3.2-.6 0-1.2-.2-1.7-.5v.1c0 1.8 1.3 3.4 3 3.7-.3.1-.7.1-1 .1-.2 0-.5 0-.7-.1.5 1.5 1.8 2.5 3.4 2.6-1.3 1-2.8 1.5-4.5 1.5-.3 0-.6 0-.9-.1 1.6 1 3.5 1.6 5.6 1.6 6.7 0 10.4-5.6 10.4-10.4v-.5c.7-.5 1.3-1.1 1.8-1.9z" fill="#fff"/></svg></a>
-          </div>
-          <h4>Subscribe to newsletter</h4>
-          <p>Follow us to get the latest updates.</p>
-          <div class="footer-email-field">
-            <input type="email" placeholder="email@provider.com" aria-label="Newsletter email">
-            <button class="btn btn-lime btn-sm" aria-label="Subscribe">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9h10.5M10.5 5.25L14.25 9l-3.75 3.75" stroke="#1C1F13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
+          <h4>Subscribe to Alerts</h4>
+          <p>Get meaningful updates on MANNA's progress.</p>
+          <form class="footer-alert-form" id="subscription-alerts-form" aria-label="Subscribe to alerts">
+            <div class="footer-email-field">
+              <input type="email" name="email" placeholder="email@provider.com" aria-label="Alert subscription email" required>
+              <button type="submit" class="btn btn-lime btn-sm" aria-label="Subscribe">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9h10.5M10.5 5.25L14.25 9l-3.75 3.75" stroke="#1C1F13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <p class="footer-alert-success" id="footer-alert-success" hidden>Subscribed! We'll keep you posted.</p>
+          </form>
         </div>
       </div>
       <div class="footer-bottom">
