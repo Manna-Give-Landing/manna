@@ -482,8 +482,15 @@ ul { list-style: none; }
   .problem-columns .problem-col:last-child { grid-column: auto; }
   .problem-microcopy { margin-top: 32px; font-size: 0.95rem; }
 
-  .features-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
-  .features-grid > * { grid-column: 1 / -1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }
+  .features-grid { grid-template-columns: 1fr !important; gap: 16px !important; grid-template-rows: none !important; }
+  /* Override nth-child grid positions from 1024px breakpoint — must match specificity */
+  .features-grid > :nth-child(1) { grid-column: 1 / -1 !important; grid-row: auto !important; }
+  .features-grid > :nth-child(2) { grid-column: 1 / -1 !important; grid-row: auto !important; }
+  .features-grid > :nth-child(3) { grid-column: 1 / -1 !important; grid-row: auto !important; }
+  .features-grid > :nth-child(4) { grid-column: 1 / -1 !important; grid-row: auto !important; }
+  .features-grid > :nth-child(5) { grid-column: 1 / -1 !important; grid-row: auto !important; }
+  .features-grid > :nth-child(6) { grid-column: 1 / -1 !important; grid-row: auto !important; }
+  .features-grid > * { min-width: 0 !important; max-width: 100% !important; }
   .feature-card { padding: 24px !important; overflow: hidden !important; box-sizing: border-box !important; width: 100% !important; }
   .feature-card--wide { grid-template-columns: 1fr !important; gap: 16px !important; }
   .feature-card--lg { min-height: auto !important; height: auto !important; }
