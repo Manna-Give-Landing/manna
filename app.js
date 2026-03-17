@@ -62,14 +62,10 @@
 
       console.log("Waitlist signup:", email);
 
-      // Show success state
       var successEl = document.getElementById(successId);
-      if (successEl) {
-        successEl.hidden = false;
-      }
+      if (successEl) successEl.hidden = false;
       input.value = "";
 
-      // Hide success after a few seconds
       setTimeout(function () {
         if (successEl) successEl.hidden = true;
       }, 5000);
@@ -83,17 +79,16 @@
   function initReveal() {
     var reveals = document.querySelectorAll(".reveal");
 
-    // If GSAP + ScrollTrigger are available, use them
     if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
 
-      reveals.forEach(function (el, i) {
+      reveals.forEach(function (el) {
         gsap.fromTo(el,
-          { opacity: 0, y: 40 },
+          { opacity: 0, y: 32 },
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
+            duration: 0.7,
             ease: "power2.out",
             scrollTrigger: {
               trigger: el,
@@ -104,28 +99,7 @@
         );
       });
 
-      // Stagger animation on plan cards
-      var planCards = document.querySelectorAll(".plan-card");
-      if (planCards.length) {
-        gsap.fromTo(planCards,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            stagger: 0.15,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: planCards[0],
-              start: "top 88%",
-              once: true
-            }
-          }
-        );
-      }
-
     } else {
-      // Fallback: IntersectionObserver
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
@@ -146,13 +120,11 @@
     if (!trigger) return;
     trigger.addEventListener("click", function () {
       var isOpen = item.classList.contains("faq-item--open");
-      // Close all
       faqItems.forEach(function (other) {
         other.classList.remove("faq-item--open");
         var btn = other.querySelector(".faq-trigger");
         if (btn) btn.setAttribute("aria-expanded", "false");
       });
-      // Toggle current
       if (!isOpen) {
         item.classList.add("faq-item--open");
         trigger.setAttribute("aria-expanded", "true");
@@ -163,20 +135,18 @@
   /* ---------- Participation accordion cards ---------- */
   var accordionCards = document.querySelectorAll("[data-accordion-card]");
   accordionCards.forEach(function (card) {
-    var header = card.querySelector(".accordion-card-header");
-    if (!header) return;
-    header.addEventListener("click", function () {
+    var cardHeader = card.querySelector(".accordion-card-header");
+    if (!cardHeader) return;
+    cardHeader.addEventListener("click", function () {
       var isOpen = card.classList.contains("accordion-card--open");
-      // Close all
       accordionCards.forEach(function (other) {
         other.classList.remove("accordion-card--open");
         var btn = other.querySelector(".accordion-card-header");
         if (btn) btn.setAttribute("aria-expanded", "false");
       });
-      // Toggle current
       if (!isOpen) {
         card.classList.add("accordion-card--open");
-        header.setAttribute("aria-expanded", "true");
+        cardHeader.setAttribute("aria-expanded", "true");
       }
     });
   });
@@ -193,7 +163,6 @@
     if (reasonSelect && reason) reasonSelect.value = reason;
   }
 
-  // All contact CTA buttons (investors + community partners)
   document.querySelectorAll(".contact-cta-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
       openContactModal("");
@@ -249,11 +218,10 @@
     });
   });
 
-  /* ---------- Init after load ---------- */
+  /* ---------- Init ---------- */
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initReveal);
   } else {
-    // Small delay to let GSAP scripts load (they're deferred)
     setTimeout(initReveal, 100);
   }
 
