@@ -587,8 +587,8 @@ ul { list-style: none; }
 }
 .legal-modal-body li { font-size: 15px; color: #444; line-height: 1.7; margin-bottom: 6px; }
 .legal-modal-body hr { border: none; border-top: 1px solid #F0F0F0; margin: 24px 0; }
-.legal-modal-body a { color: var(--lime-green); text-decoration: underline; }
-.legal-modal-body a:hover { color: #fff; }
+.legal-modal-body a { color: #1a3f6b; text-decoration: underline; }
+.legal-modal-body a:hover { color: #2B2B2B; }
 
 .legal-modal-footer {
   padding: 16px 40px; border-top: 1px solid #E5E5E5; text-align: center; flex-shrink: 0;
