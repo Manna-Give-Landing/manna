@@ -210,12 +210,48 @@ ul { list-style: none; }
 
 /* ---- HERO ---- */
 .hero {
-  padding: 160px 0 100px;
+  padding: 160px 0 80px;
   position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background shapes — Financeo style */
+.hero-shape {
+  position: absolute;
+  border-radius: 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-shape--1 {
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.07), rgba(46, 204, 113, 0.02));
+  top: 60px;
+  right: -60px;
+  transform: rotate(15deg);
+}
+.hero-shape--2 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(15, 27, 45, 0.04), rgba(15, 27, 45, 0.01));
+  bottom: 120px;
+  left: -40px;
+  transform: rotate(-12deg);
 }
 
 .hero-inner {
-  max-width: 680px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+}
+
+.hero-col-left {}
+.hero-col-right {
+  padding-top: 16px;
 }
 
 .hero-eyebrow {
@@ -224,57 +260,33 @@ ul { list-style: none; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin-bottom: 20px;
-}
-
-.hero-title {
-  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
-  color: var(--text);
   margin-bottom: 24px;
 }
 
-.hero-subtitle {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 36px;
-  max-width: 520px;
+.hero-title {
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--text);
 }
 
-.hero-form-field {
-  display: flex;
-  align-items: center;
-  background: var(--bg-white);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-pill);
-  padding: 5px 5px 5px 24px;
-  max-width: 460px;
-  transition: border-color var(--transition), box-shadow var(--transition);
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 420px;
 }
-.hero-form-field:focus-within {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-glow);
-}
-.hero-form-field input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-family: var(--font);
-  font-size: 0.92rem;
-  color: var(--text);
-  background: transparent;
-  min-width: 0;
-}
-.hero-form-field input::placeholder { color: var(--text-muted); }
-.hero-form-field .btn {
-  flex-shrink: 0;
+
+.btn-hero {
+  padding: 16px 36px;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .hero-form-helper {
-  margin-top: 14px;
+  margin-top: 16px;
   font-size: 0.78rem;
   color: var(--text-muted);
 }
@@ -1322,6 +1334,8 @@ ul { list-style: none; }
   .section--std { padding: 72px 0; }
 
   .hero { padding: 130px 0 72px; }
+  .hero-inner { gap: 40px; }
+  .hero-title { font-size: clamp(2.25rem, 4.5vw, 3.25rem); }
 
   .hero-dashboard { margin: 36px -24px 0; border-radius: 12px 12px 0 0; }
   .hd-body { grid-template-columns: 140px 1fr; }
@@ -1421,31 +1435,27 @@ ul { list-style: none; }
   }
 
   /* Hero */
-  .hero { padding: 100px 0 56px; }
-  .hero-title {
-    font-size: clamp(2.25rem, 10vw, 3rem);
-    margin-bottom: 18px;
-  }
-  .hero-subtitle { margin-bottom: 28px; }
-  .hero-form-field {
-    flex-direction: column;
-    border-radius: var(--radius-lg);
-    padding: 6px;
-    gap: 6px;
-  }
-  .hero-form-field input {
-    padding: 14px 16px;
-    width: 100%;
+  .hero { padding: 100px 0 48px; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
     text-align: center;
   }
-  .hero-form-field .btn {
-    width: 100%;
-    border-radius: var(--radius-md);
+  .hero-col-right { padding-top: 0; }
+  .hero-title {
+    font-size: clamp(2.25rem, 10vw, 3rem);
   }
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+  }
+  .btn-hero { width: 100%; }
   .hero-form-helper {
     text-align: center;
     font-size: 0.72rem;
   }
+  .hero-shape { display: none; }
 
   /* Quote */
   .quote-band { padding: 32px 0; }
