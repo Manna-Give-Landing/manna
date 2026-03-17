@@ -286,6 +286,15 @@ ul { list-style: none; }
 .transfer-cat { font-size: 0.7rem; font-weight: 700; padding: 5px 12px; border-radius: 6px; background: var(--bg-page); color: var(--text-muted); }
 .transfer-user { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 700; color: var(--text-dark); }
 
+/* Give Directly card photo */
+.feature-card--give-directly { position: relative; overflow: hidden; }
+.give-directly-bg { position: absolute; inset: 0; z-index: 0; }
+.give-directly-bg-img { width: 100%; height: 100%; object-fit: cover; }
+.give-directly-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.25)); }
+.feature-card--give-directly .feature-card-icon,
+.feature-card--give-directly .feature-card-title,
+.feature-card--give-directly .feature-card-desc { position: relative; z-index: 1; }
+
 /* Circle visual */
 .card-visual-circles { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: auto; padding: 20px 0; }
 .category-circle { width: 56px; height: 56px; border-radius: 50%; background: var(--bg-white); display: flex; align-items: center; justify-content: center; border: 1px solid var(--divider); }
