@@ -89,8 +89,8 @@ ul { list-style: none; }
 .hero-form-success { margin-top: 10px; font-size: 0.88rem; color: #4a7a1a; font-weight: 700; }
 
 /* ========== DASHBOARD MOCKUP ========== */
-.dashboard-mockup { background: var(--bg-white); border-radius: 16px; box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--divider); position: relative; }
-.dashboard-mockup::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 20%; background: linear-gradient(to bottom, transparent 0%, var(--bg-white) 100%); z-index: 10; pointer-events: none; border-radius: 0 0 16px 16px; }
+.dashboard-mockup { background: var(--bg-white); border-radius: 16px; box-shadow: 0 -2px 16px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.08); overflow: hidden; border: 1px solid var(--divider); position: relative; mask-image: linear-gradient(to bottom, black 0%, black 65%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 65%, transparent 100%); }
+.dashboard-mockup::after { content: none; }
 .dashboard-mockup--mini { margin-top: 56px; max-width: 900px; margin-left: auto; margin-right: auto; transform: scale(0.92); }
 .browser-chrome { display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: #FAFAFA; border-bottom: 1px solid var(--divider); font-size: 0.75rem; color: #999; }
 .browser-dots { display: flex; gap: 6px; }
@@ -104,7 +104,7 @@ ul { list-style: none; }
 
 .dashboard-body { display: grid; grid-template-columns: 180px 1fr; min-height: 380px; }
 .dashboard-mockup--mini .dashboard-body { min-height: 260px; grid-template-columns: 140px 1fr; }
-.dashboard-mockup--mini::after { height: 50%; background: linear-gradient(to bottom, transparent 0%, var(--dark-olive) 100%); }
+.dashboard-mockup--mini { mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%); }
 
 /* Sidebar */
 .dashboard-sidebar { background: #FAFAFA; border-right: 1px solid var(--divider); padding: 20px 16px; display: flex; flex-direction: column; }
@@ -169,8 +169,10 @@ ul { list-style: none; }
 
 /* Stacked Year 1 + Year 3 cards next to iPhone wallet */
 .panel-bottom-row { display: flex; align-items: flex-end; justify-content: flex-end; gap: 6px; }
-.projection-stack { display: flex; flex-direction: column; gap: 4px; opacity: 0.3; }
+.projection-stack { display: flex; flex-direction: column; gap: 4px; margin-top: 16px; margin-right: -16px; transform: translate(16px, 16px); }
 .projection-card--stacked { width: 140px; }
+.projection-card--yr1 { mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%); }
+.projection-card--yr3 { mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%); }
 
 /* Logo strip */
 .logo-strip { display: flex; justify-content: center; gap: 48px; padding: 40px 0 0; }
@@ -325,8 +327,9 @@ ul { list-style: none; }
 
 /* ========== WHY MANNA / TESTIMONIAL ========== */
 .testimonial-layout { display: grid; grid-template-columns: 300px 1fr; gap: 0; min-height: 400px; border-radius: var(--card-radius); overflow: hidden; }
-.testimonial-logo-card { background: var(--bg-page); display: flex; align-items: center; justify-content: center; padding: 48px; }
+.testimonial-logo-card { background: var(--bg-page); display: flex; align-items: center; justify-content: center; padding: 24px; overflow: hidden; }
 .testimonial-logo-img { max-width: 160px; height: auto; }
+.testimonial-phone-img { max-width: 240px; width: 100%; height: auto; border-radius: 24px; }
 .testimonial-content { background: var(--dark-olive); padding: 48px; color: var(--text-on-dark); display: flex; flex-direction: column; }
 .testimonial-quote { margin-bottom: 24px; }
 .testimonial-quote p { font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.75; margin-bottom: 12px; }
@@ -466,11 +469,40 @@ ul { list-style: none; }
   .problem-columns .problem-col:last-child { grid-column: auto; }
   .problem-microcopy { margin-top: 32px; font-size: 0.95rem; }
 
-  .features-grid { grid-template-columns: 1fr !important; }
+  .features-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
   .features-grid > * { grid-column: 1 / -1 !important; grid-row: auto !important; }
-  .feature-card--wide { grid-template-columns: 1fr; }
-  .feature-card--lg { min-height: auto; }
-  .feature-card--sm { min-height: auto; }
+  .feature-card { padding: 24px !important; overflow: visible !important; }
+  .feature-card--wide { grid-template-columns: 1fr !important; }
+  .feature-card--lg { min-height: auto !important; }
+  .feature-card--sm { min-height: auto !important; }
+
+  /* Wallet cards inside Connect card — flow naturally */
+  .card-visual-wallet { height: auto; position: relative; min-height: 180px; }
+  .wallet-card { width: 200px; height: 128px; }
+  .wallet-card--back { left: 0; top: 0; }
+  .wallet-card--front { left: 40px; top: 24px; }
+
+  /* Connect phone image — flow naturally below cards */
+  .connect-phone-img { position: relative !important; right: auto !important; bottom: auto !important; width: 140px !important; margin: 16px auto 0 !important; transform: rotate(4deg); }
+
+  /* Chart visual — ensure it fits */
+  .card-visual-chart { overflow: hidden; }
+  .chart-body { grid-template-columns: 1fr !important; }
+  .chart-bars { height: 60px; }
+
+  /* Transfer visual inside Choose Freely — full width */
+  .card-visual-transfer { margin-top: 16px; }
+
+  /* Circles visual — center and fit */
+  .card-visual-circles { padding: 12px 0; }
+
+  /* Subscription visual */
+  .card-visual-sub { margin-top: 12px; }
+
+  /* Dark card — ensure text wraps properly */
+  .feature-card--dark { padding: 24px !important; }
+  .feature-card--dark .feature-card-title { word-wrap: break-word; }
+
   .section-heading { font-size: clamp(1.75rem, 7vw, 2.25rem); }
   .section-subheading { margin-bottom: 36px; }
 
