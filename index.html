@@ -624,8 +624,8 @@
         <div class="footer-col">
           <h4>Company</h4>
           <a href="#">About</a>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
+          <a href="#" data-modal="privacy">Privacy Policy</a>
+          <a href="#" data-modal="terms">Terms of Service</a>
         </div>
         <div class="footer-col footer-col--subscribe">
           <h4>Subscribe to Alerts</h4>
@@ -646,6 +646,23 @@
       </div>
     </div>
   </footer>
+
+  <!-- ========== LEGAL MODALS ========== -->
+  <div class="legal-overlay" id="legal-overlay" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title" hidden>
+    <div class="legal-modal">
+      <div class="legal-modal-header">
+        <div>
+          <h2 class="legal-modal-title" id="legal-modal-title"></h2>
+          <p class="legal-modal-subtitle">MANNA Platform LLC &middot; Last updated: March 2026</p>
+        </div>
+        <button class="legal-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="legal-modal-body" id="legal-modal-body"></div>
+      <div class="legal-modal-footer">
+        <a href="mailto:info@mannagive.org">info@mannagive.org</a>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
